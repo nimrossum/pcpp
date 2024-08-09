@@ -24,7 +24,7 @@ Besides the material in the lectures. We recommend the online textbook [Learn Yo
   2. `$ sudo dpkg -i esl-erlang_26.2.3-1~ubuntu~jammy_amd64.deb`
 	 * My computer did not have all dependencies; `apt install -f` detected that `libncurses5 libsctp1 libtinfo5` were missing. 
 	   After installing them, the installation of Erlang completed successfully.
-	 * `apt install -f` also suggested installing `lksctp-tools`. I installed.
+	 * `apt install -f` also suggested installing `lksctp-tools`. I installed it.
 	
 * W10 - TBD
 * W11 - TBD
