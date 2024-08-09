@@ -15,6 +15,7 @@ Besides the material in the lectures. We recommend the online textbook [Learn Yo
   * Ubuntu (and other Linux distros) and select 26.2.3-1: https://www.erlang-solutions.com/downloads/
   * Mac OS (the page refers to brew): https://www.erlang-solutions.com/downloads/
   * Windows: https://www.erlang.org/patches/otp-26.2.3
+	
   
 
 ## Install Erlang
@@ -26,7 +27,15 @@ Besides the material in the lectures. We recommend the online textbook [Learn Yo
 	   After installing them, the installation of Erlang completed successfully.
 	 * `apt install -f` also suggested installing `lksctp-tools`. I installed it.
 	
-* W10 - TBD
+* W10
+  1. Choose "Download Windows Installer" this will download a file: `otp_win64_26.2.3.exe`.
+  2. Run this, a window opens (Choose components) click next. A new window pops up, make sure you note the path to the installed files. Lets denote this path `path/to/erlang`.
+  3. Add this path to your windows `Path` variable the path to the `bin` folder, i.e., `path/to/erlang/bin`---see https://adoptingerlang.org/docs/development/setup/ or follow this steps:
+	 1. Open "Edit the system environment variables".
+	 2. Select "Environment Variables...".
+	 3. Double-click in the `Path` variable.
+	 4. Click "New".
+	 5. Add the path to `bin` folder, i.e., `/path/to/erlang/bin` (replace `/path/to/erlang/bin` with the actual path where you installed Erlang).
 * W11 - TBD
 * Mac OS - TBD (possibly different versions)
   
@@ -52,6 +61,6 @@ To test your installation, please run the example in the folder `testing_erlang`
 	2. `> demo:start().` (execute the start function in `demo` module)
 	3. `> q().` (exit the interpreter)
 	
-	In general, if you start the interpreter in a directory with compiled .erl files (i.e., .beam files). You can directly call any exported functions `funcion(...)` within a module `module` by running `> module:function(...).`. As a convention, we will always use a function `start()` as the entry point for the module. This corresponds to the `public static void main(String args[])` method in a Java class.
+	In general, if you start the interpreter in a directory with compiled .erl files (i.e., .beam files). You can directly call any exported functions `function(...)` within a module `module` by running `> module:function(...).`. As a convention, we will always use a function `start()` as the entry point for the module. This corresponds to the `public static void main(String args[])` method in a Java class.
 
 4. Repeat steps 1–3 for the modules in the folders `broadcast` and `modules`. In the folder `modules`, the starting module is `module_a`, and, as required, it contains a `start()` function.
