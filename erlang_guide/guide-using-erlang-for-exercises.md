@@ -42,7 +42,7 @@ Besides the material in the lectures. We recommend the online textbook [Learn Yo
   
 ## Running code
 
-After successfully installing Erlang, you should be able to start the Erlang interpreter with `$ erl`. You can exit the Erlang interpreter by, e.g., typing `> q().`.
+After successfully installing Erlang, you should be able to start the Erlang interpreter with `$ erl`. You can exit the Erlang interpreter by, e.g., typing `> q().` (note that the "." is part of the command).
 
 To test your installation, please run the example in the folder `testing_erlang`. This folder includes 3 projects `broadcast`, `demo` and `modules`; each of them in a different folder.
 
@@ -59,7 +59,7 @@ To test your installation, please run the example in the folder `testing_erlang`
 3. Run the project by using `erl` as follows:
 
 	1. `$ erl` (enter the interpreter)
-	2. `> demo:start().` (execute the start function in `demo` module)
+	2. `> demo:start().` (execute the start function in `demo` module | note that and the "." is part of the command)
 	3. `> q().` (exit the interpreter)
 	
 	In general, if you start the interpreter in a directory with compiled .erl files (i.e., .beam files). You can directly call any exported functions `function(...)` within a module `module` by running `> module:function(...).`. As a convention, we will always use a function `start()` as the entry point for the module. This corresponds to the `public static void main(String args[])` method in a Java class.
