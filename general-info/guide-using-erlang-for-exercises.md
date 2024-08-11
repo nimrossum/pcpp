@@ -31,7 +31,7 @@ Below we explain how to install Erlang and run 3 example projects. The guide tar
 * W10
   1. Download Erlang installer: https://www.erlang.org/patches/otp-26.2.3
 	 * Choose "Download Windows Installer" this will download a file: `otp_win64_26.2.3.exe`.
-  2. Run this, a window opens (Choose components) click next. A new window pops up, make sure you note the path to the installed files. Lets denote this path `path/to/erlang`.
+  2. Run this, a window opens (Choose components) click next. A new window pops up, make sure you note the path to the installed files. Let's denote this path `path/to/erlang`.
   3. Add this path to your windows `Path` variable the path to the `bin` folder, i.e., `path/to/erlang/bin`---see https://adoptingerlang.org/docs/development/setup/ or follow this steps:
 	 1. Open "Edit the system environment variables".
 	 2. Select "Environment Variables...".
