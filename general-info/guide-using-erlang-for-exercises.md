@@ -65,6 +65,6 @@ To test your installation, please run the example in the folder `testing_erlang`
 	2. `> demo:start().` (execute the start function in `demo` module | note that and the "." is part of the command)
 	3. `> q().` (exit the interpreter)
 	
-	In general, if you start the interpreter in a directory with compiled .erl files (i.e., .beam files). You can directly call any exported functions `function(...)` within a module `module` by running `> module:function(...).`. As a convention, we will always use a function `start()` as the entry point for the module. This corresponds to the `public static void main(String args[])` method in a Java class.
+	In general, if you start the interpreter in a directory with compiled .erl files (i.e., .beam files), you can directly call any exported functions `function(...)` within a module `module` by running `> module:function(...).`. As a convention, we will always use a function `start()` as the entry point for the module. This corresponds to the `public static void main(String args[])` method in a Java class.
 
 4. Repeat steps 1–3 for the modules in the folders `broadcast` and `modules`. In the folder `modules`, the starting module is `module_a`, and, as required, it contains a `start()` function.
