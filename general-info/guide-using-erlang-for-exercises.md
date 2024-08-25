@@ -1,24 +1,16 @@
-# Mini-guide on using Erlang for exercises (UNDER CONSTRUCTION)
-
-**Warning: This guide is currently under construction and the content is subject to change**
+# Mini-guide on using Erlang for exercises
 
 This guide outlines the steps to run the Erlang code for lectures and exercises in the course Practical Concurrent and Parallel Programming (PCPP).
 In this course, we will use the programming language Erlang as a vehicular language to put in practice the concurrency concepts related to message passing.
 Erlang is ideal for this purpose, as it embeds the actor model by design (which is the concurrency model that we will study in PCPP for message passing).
-We will use Erlang version 26.2.3－as this is the newest version with packed installers in all major OSs.
+We will use Erlang version ≥ 26－as this is the newest version with packed installers in all major OSs.
 
 Unlike for Java programs, we will not use a build tool for Erlang. 
 Instead, we will use the built-in `make` facility in the Erlang interpreter.
 
 Besides the material in the lectures. We recommend the online textbook [Learn You Some Erlang for great good! ](https://learnyousomeerlang.com/content) as a reference to program in Erlang. We recommend that you start looking into Erlang from the beginning of the course, so that when we start using Erlang you are already familiar with the syntax and basic functionality.
   
-* You can download the Erlang installer 
-  * Ubuntu (and other Linux distros) and select 26.2.3-1: https://www.erlang-solutions.com/downloads/
-  * Mac OS (the page refers to brew): https://www.erlang-solutions.com/downloads/
-  * Windows: https://www.erlang.org/patches/otp-26.2.3
-	
-	
-Below we explain how to install Erlang and run 3 example projects. The guide targets for 2 OSs: Ubuntu 22.04 and Windows 10. Most likely this guide applies to other versions of these OSs, and to other Linux distributions. The guide focuses on Erlang 26.2.3, but the steps below should work for other versions. If you have problems following these steps do not hesitate to contact us.
+For most Operating Systems (OSs), you can download the Erlang installer following the steps in https://www.erlang-solutions.com/downloads/. Below we explain how to install Erlang and run 3 example projects. The guide targets three major types of OSs: Linux (Ubuntu 22.04, Fedora and NixOS), Windows 10/11, and MacOS. Most likely the steps in this guide also apply to other versions and distributions of these OSs. If you have problems following these steps do not hesitate to contact us.
   
 
 ## Install Erlang
@@ -28,7 +20,7 @@ Below we explain how to install Erlang and run 3 example projects. The guide tar
   2. `$ sudo dpkg -i esl-erlang_26.2.3-1~ubuntu~jammy_amd64.deb`
 	 * If you have missing dependencies, execute `$ sudo apt install -f` so that `apt` installs them.
 	
-* W10
+* W10/W11
   1. Download Erlang installer: https://www.erlang.org/patches/otp-26.2.3
 	 * Choose "Download Windows Installer" this will download a file: `otp_win64_26.2.3.exe`.
   2. Run this, a window opens (Choose components) click next. A new window pops up, make sure you note the path to the installed files. Let's denote this path `path/to/erlang`.
@@ -39,9 +31,16 @@ Below we explain how to install Erlang and run 3 example projects. The guide tar
 	 4. Click "New".
 	 5. Add the path to `bin` folder, i.e., `/path/to/erlang/bin` (replace `/path/to/erlang/bin` with the actual path where you installed Erlang).
 
-* W11 - TBA (very likely the guide for W10 works on W11 as well)
+* Mac OS
+  1. `$ brew install erlang` (you may need run it as `sudo`, according to https://www.erlang-solutions.com/downloads/)
 
-* Mac OS - TBA 
+## Other OSs
+
+* Fedora
+  1. You can use the `dnf` package manager, e.g., `$ sudo dnf install erlang-26.2.2-1.fc40.x86_64`
+  
+* NixOS
+  1. Contact Ahmad (`ahsa@itu.dk`) for a git patch to install Erlang.
   
 ## Running code
 
