@@ -36,7 +36,7 @@ For most Operating Systems (OSs), you can download the Erlang installer followin
 
 ## Other OSs
 
-* Fedora
+* Fedora 40
   1. You can use the `dnf` package manager, e.g., `$ sudo dnf install erlang-26.2.2-1.fc40.x86_64`
   
 * NixOS
