@@ -1,7 +1,5 @@
 # Mini-guide on using Gradle for exercises
 
-**NOTE: The content of this page is preliminary and subject to changes**
-
 We use the build tool [Gradle](https://gradle.org/) for compiling and running the code in this course.
 This is because Gradle offers many advantages: easy and uniform way to import libraries, uniform compilation and execution environment in different OSs, and compatibility with popular IDEs. We require Gradle version 7.2 or higher.
 
