@@ -42,3 +42,17 @@ We have already decompiled and verified that all the operations produce the same
 This is similar to the first problem. But now since the two functions are counteracting each other we will end up with a result close to 0.
 
 Using reentry locks we get zero every time.
+
+## 1.8
+
+The happens before relation describes the following:
+
+- Let $A$ denote locking
+- Let $B$ denote fetching the value
+- Let $C$ denote adding to the value
+- Let $D$ denote storing the value
+- Let $E$ denote unlocking
+
+$$A \rightarrow B \rightarrow C \rightarrow D \rightarrow E $$
+
+This prevents undesirable interleavings.
