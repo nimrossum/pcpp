@@ -13,3 +13,8 @@ We are lucky. The threads are interleaved in such a way that the counter is incr
 
 
 This is likely to happen with only 200 counts, but it is not gaurenteed, as we see in the example with more executions. Therefore we cannot assume that the result will be 200 every time.
+
+## 1.3
+
+
+It's just syntastic sugar. We tried the different syntaxes and they all compiled to the same java program.
