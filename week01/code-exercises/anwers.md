@@ -118,3 +118,40 @@ $$A \rightarrow B \rightarrow C \rightarrow D \rightarrow E $$
 # Exercise 1.3
 
 We identified the counting and checking part as the critical section of the program. We have made this section atomic by using a reentrant lock. This ensures that the threads do not interfere with each other when counting and checking the number of visitors. This is why the output is always 15_000.
+
+# Exercise 1.4
+
+
+## 1
+Book:
+- Resource utilization
+- Fairness
+- Convenience
+
+Lecture notes:
+- Inherent
+- Exploitation
+- Hidden
+
+Resource utilization: Inherent + Exploitation
+Fairness: In practive achieved via what is provided via hidden parallization. Without fairness, hidden cannot be achieved fairly.
+Convenience: Related to fairness - packing: It's easier to pack socks than TV's.
+
+Virtualization:
+  - Hidden + Exploitation
+
+## 2
+
+- Inherent (unfairness, since 1 thread is dedicated to only the UI)
+  - I have a phone with many apps running
+  - I have a computer with many programs running
+  - I have a smartwatch with many apps running
+- Exploitation
+  - https://metavo.metacentrum.cz/en/
+  - Multi-core processors in our computers
+  - The graphics card in our computers is a parallel processor with many cores
+- Hidden
+  - Virtual machines (VM, Docker)
+  - PyTorch
+  - Microsoft Parallel Data Structures
+  - Web API's
