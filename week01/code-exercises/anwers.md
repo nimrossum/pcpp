@@ -77,8 +77,8 @@ See `Printer.java`
 No interleaving:
 
 ```
-t1:  -|  -|  -|  -|
-t2:    -|  -|  -|  -|
+t1:  -           |  -           |  -           |  -           |
+t2:    -           |  -           |  -           |  -           |
 ```
 
 Interleaving:
@@ -100,11 +100,11 @@ Since we used a reentrant lock, the threads are not interleaved, and the output 
 
 ## 4
 
-A: Take Lock
-B: Print -
-C: Wait 50ms
-D: Print |
-E: Release Lock
+- A: Take Lock
+- B: Print -
+- C: Wait 50ms
+- D: Print |
+- E: Release Lock
 
 ```
 t1 A B C D E           A B C D E
@@ -137,6 +137,7 @@ Lecture notes:
 - Hidden
 
 Resource utilization: Inherent + Exploitation
+
 Fairness:
 
 - In practive achieved via what is provided via hidden parallization.
