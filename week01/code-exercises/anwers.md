@@ -25,3 +25,10 @@ Note: In your explanation, please use the concepts and vocabulary introduced dur
 sections, interleavings, race conditions, mutual exclusion, etc
 
 We have eliminated the possibility of unintentional interleaving of operations by locking the critical section of the program when accessed by the threads. In short, we have made 'increment' an atomic operation.
+
+## 1.5
+
+Yes, we have the fewest lines of code possible in the critical section, just the increment function, which needs to be an atomic operation. Since the function is so simple, the only real alternative would be to define
+the entire for loop as the critical section. This would not allow for interleaving operations as the entire loop would have to finish for the next one to execute.
+
+
