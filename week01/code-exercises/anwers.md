@@ -114,3 +114,7 @@ We ensure that the entire printing operation to the shared terminal is atomic us
 This prevents any interleaving of the operations.
 
 $$A \rightarrow B \rightarrow C \rightarrow D \rightarrow E $$
+
+# Exercise 1.3
+
+We identified the counting and checking part as the critical section of the program. We have made this section atomic by using a reentrant lock. This ensures that the threads do not interfere with each other when counting and checking the number of visitors. This is why the output is always 15_000.
