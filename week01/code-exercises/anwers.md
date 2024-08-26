@@ -11,7 +11,6 @@ How could this be?
 
 We are lucky. The threads are interleaved in such a way that the counter is incremented by one in each step. This is what we call a race condition.
 
-
 This is likely to happen with only 200 counts, but it is not guaranteed, as we see in the example with more executions. Therefore we cannot assume that the result will be 200 every time.
 
 ## 3
@@ -64,6 +63,7 @@ count: 0  1      2     3     1     2     3
 t1:      r1 w1 r2 w2 r3 w3
 t2:      r1               w1  r2 w2 r3 w3
 ```
+
 So 3 is the lowest possible value of count after the program has executed.
 
 # Exercise 1.2
@@ -75,12 +75,14 @@ See `Printer.java`
 ## 2
 
 No interleaving:
+
 ```
 t1:  -|  -|  -|  -|
 t2:    -|  -|  -|  -|
 ```
 
 Interleaving:
+
 ```
 t1:  -|-  |-|
 t2:     -|
@@ -89,7 +91,6 @@ t2:     -|
 If the start of the second thread occurs in between critical sections of the first thread, the output will be interleaved.
 
 Due to the thread sleeping between the dash and the pipe, the chance of weaving faults is rare, so the critical section of each thread is unlikely to clash, hence the rare occurrence of interleaving.
-
 
 ## 3
 
@@ -105,11 +106,11 @@ C: Wait 50ms
 D: Print |
 E: Release Lock
 
-
 ```
 t1 A B C D E           A B C D E
 t2           A B C D E           A B C D E
 ```
+
 We ensure that the entire printing operation to the shared terminal is atomic using the lock.
 This prevents any interleaving of the operations.
 
@@ -121,24 +122,31 @@ We identified the counting and checking part as the critical section of the prog
 
 # Exercise 1.4
 
-
 ## 1
+
 Book:
+
 - Resource utilization
 - Fairness
 - Convenience
 
 Lecture notes:
+
 - Inherent
 - Exploitation
 - Hidden
 
 Resource utilization: Inherent + Exploitation
-Fairness: In practive achieved via what is provided via hidden parallization. Without fairness, hidden cannot be achieved fairly.
-Convenience: Related to fairness - packing: It's easier to pack socks than TV's.
+Fairness:
+
+- In practive achieved via what is provided via hidden parallization.
+- Without fairness, hidden cannot be achieved fairly.
+- Time-sharing is a method for achieving fairness.
+  Convenience: Related to fairness - packing: It's easier to pack socks than TV's.
 
 Virtualization:
-  - Hidden + Exploitation
+
+- Hidden + Exploitation
 
 ## 2
 
