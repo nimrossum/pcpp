@@ -1,13 +1,24 @@
 package exercises01;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 class Printer {
+
+  Lock lock = new ReentrantLock();
+
   public void print() {
-    System.out.print("-");
+    lock.lock();
     try {
-      Thread.sleep(50);
-    } catch (InterruptedException exn) {
+      System.out.print("-");
+      try {
+        Thread.sleep(50);
+      } catch (InterruptedException exn) {
+      }
+      System.out.print("|");
+    } finally {
+      lock.unlock();
     }
-    System.out.print("|");
   }
 
   public static void main(String[] args) throws InterruptedException {

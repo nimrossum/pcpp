@@ -71,3 +71,21 @@ So 3 is the lowest possible value of count after the program has executed.
 ## 1
 
 See `Printer.java`
+
+## 2
+
+No interleaving:
+```
+t1:  -|  -|  -|  -|
+t2:    -|  -|  -|  -|
+```
+
+Interleaving:
+```
+t1:  -|-  |-|
+t2:     -|
+```
+
+If the start of the second thread occurs in between critical sections of the first thread, the output will be interleaved.
+
+Due to the thread sleeping between the dash and the pipe, the chance of weaving faults is rare, so the critical section of each thread is unlikely to clash, hence the rare occurrence of interleaving.
