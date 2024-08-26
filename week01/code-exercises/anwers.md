@@ -1,10 +1,10 @@
-## Exercises 1
+## Exercise 1.1
 
-## 1.1
+## 1
 
 We get 19857118 and not 2000000
 
-## 1.2
+## 2
 
 Now we get 200.
 How could this be?
@@ -14,11 +14,11 @@ We are lucky. The threads are interleaved in such a way that the counter is incr
 
 This is likely to happen with only 200 counts, but it is not guaranteed, as we see in the example with more executions. Therefore we cannot assume that the result will be 200 every time.
 
-## 1.3
+## 3
 
 It's just syntactic sugar. We tried the different syntaxes and they all compiled to the same java program.
 
-## 1.4
+## 4
 
 Explain why your solution is correct, and why no other output is possible.
 Note: In your explanation, please use the concepts and vocabulary introduced during the lecture, e.g., critical
@@ -26,24 +26,24 @@ sections, interleavings, race conditions, mutual exclusion, etc
 
 We have eliminated the possibility of unintentional interleaving of operations by locking the critical section of the program when accessed by the threads. In short, we have made 'increment' an atomic operation.
 
-## 1.5
+## 5
 
 Yes, we have the fewest lines of code possible in the critical section, just the increment function, which needs to be an atomic operation. Since the function is so simple, the only real alternative would be to define
 the entire for loop as the critical section. This would not allow for interleaving operations as the entire loop would have to finish for the next one to execute.
 
-## 1.6
+## 6
 
 hehe oops...
 
 We have already decompiled and verified that all the operations produce the same result.
 
-## 1.7
+## 7
 
 This is similar to the first problem. But now since the two functions are counteracting each other we will end up with a result close to 0.
 
 Using reentry locks we get zero every time.
 
-## 1.8
+## 8
 
 The happens before relation describes the following:
 
@@ -57,7 +57,7 @@ $$A \rightarrow B \rightarrow C \rightarrow D \rightarrow E $$
 
 This prevents undesirable interleavings.
 
-## 1.9
+## 9
 
 ```
 count: 0  1      2     3     1     2     3
@@ -65,3 +65,5 @@ t1:      r1 w1 r2 w2 r3 w3
 t2:      r1               w1  r2 w2 r3 w3
 ```
 So 3 is the lowest possible value of count after the program has executed.
+
+# Exercise 1.2
