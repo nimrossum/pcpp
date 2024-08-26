@@ -22,5 +22,7 @@ application {
     if (project.hasProperty("mainClass"))
 	mainClass.set(project.getProperty("mainClass"))
     else
+    // Set this to run custom main class
+    // mainClass.set("exercises01.CounterThreads2Covid")
 	System.out.println("INFO: If you are trying to run the program, recall to specify the main class with `-PmainClass=<package>.<java_class>`")
 }
