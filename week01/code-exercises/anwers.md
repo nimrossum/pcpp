@@ -31,4 +31,8 @@ We have eliminated the possibility of unintentional interleaving of operations b
 Yes, we have the fewest lines of code possible in the critical section, just the increment function, which needs to be an atomic operation. Since the function is so simple, the only real alternative would be to define
 the entire for loop as the critical section. This would not allow for interleaving operations as the entire loop would have to finish for the next one to execute.
 
+## 1.6
 
+hehe oops...
+
+We have already decompiled and verified that all the operations produce the same result.
