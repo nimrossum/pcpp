@@ -36,3 +36,9 @@ the entire for loop as the critical section. This would not allow for interleavi
 hehe oops...
 
 We have already decompiled and verified that all the operations produce the same result.
+
+## 1.7
+
+This is similar to the first problem. But now since the two functions are counteracting each other we will end up with a result close to 0.
+
+Using reentry locks we get zero every time.

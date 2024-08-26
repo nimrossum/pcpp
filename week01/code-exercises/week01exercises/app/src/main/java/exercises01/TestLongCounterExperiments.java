@@ -19,7 +19,7 @@ public class TestLongCounterExperiments {
         });
         Thread t2 = new Thread(() -> {
                 for (int i=0; i<counts; i++)
-                    lc.increment();
+                    lc.decrement();
         });
         t1.start(); t2.start();
         try { t1.join(); t2.join(); }
@@ -44,11 +44,24 @@ public class TestLongCounterExperiments {
                 lock.unlock();
             }
         }
+        public void decrement() {
+            try {
+                lock.lock();
+                count = count - 1;
+            } finally {
+                lock.unlock();
+            }
+        }
+
+        public void incrementNoLock() {
+            count = count + 1;
+        }
+        public void decrementNoLockProblem() {
+            count = count - 1;
+        }
 
         public long get() {
             return count;
         }
     }
 }
-
-
