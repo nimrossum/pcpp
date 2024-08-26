@@ -67,3 +67,7 @@ t2:      r1               w1  r2 w2 r3 w3
 So 3 is the lowest possible value of count after the program has executed.
 
 # Exercise 1.2
+
+## 1
+
+See `Printer.java`
