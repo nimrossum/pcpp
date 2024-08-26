@@ -89,3 +89,28 @@ t2:     -|
 If the start of the second thread occurs in between critical sections of the first thread, the output will be interleaved.
 
 Due to the thread sleeping between the dash and the pipe, the chance of weaving faults is rare, so the critical section of each thread is unlikely to clash, hence the rare occurrence of interleaving.
+
+
+## 3
+
+See `Printer.java`
+
+Since we used a reentrant lock, the threads are not interleaved, and the output is always the same.
+
+## 4
+
+A: Take Lock
+B: Print -
+C: Wait 50ms
+D: Print |
+E: Release Lock
+
+
+```
+t1 A B C D E           A B C D E
+t2           A B C D E           A B C D E
+```
+We ensure that the entire printing operation to the shared terminal is atomic using the lock.
+This prevents any interleaving of the operations.
+
+$$A \rightarrow B \rightarrow C \rightarrow D \rightarrow E $$
