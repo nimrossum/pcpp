@@ -16,5 +16,12 @@ This is likely to happen with only 200 counts, but it is not gaurenteed, as we s
 
 ## 1.3
 
-
 It's just syntastic sugar. We tried the different syntaxes and they all compiled to the same java program.
+
+## 1.4
+
+Explain why your solution is correct, and why no other output is possible.
+Note: In your explanation, please use the concepts and vocabulary introduced during the lecture, e.g., critical
+sections, interleavings, race conditions, mutual exclusion, etc
+
+We have eliminated the possibility of unintentional interleaving of operations by locking the critical section of the program when accessed by the threads. In short, we have made 'increment' an atomic operation.
