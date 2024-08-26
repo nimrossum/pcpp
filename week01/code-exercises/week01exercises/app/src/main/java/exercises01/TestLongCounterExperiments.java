@@ -10,16 +10,16 @@ public class TestLongCounterExperiments {
 
     LongCounter lc = new LongCounter();
     Lock lock = new ReentrantLock();
-    int counts = 10_000_000;
+    int counts = 3;
 
     public TestLongCounterExperiments() {
         Thread t1 = new Thread(() -> {
                 for (int i=0; i<counts; i++)
-                    lc.increment();
+                    lc.incrementNoLock();
         });
         Thread t2 = new Thread(() -> {
                 for (int i=0; i<counts; i++)
-                    lc.decrement();
+                    lc.incrementNoLock();
         });
         t1.start(); t2.start();
         try { t1.join(); t2.join(); }
@@ -56,7 +56,7 @@ public class TestLongCounterExperiments {
         public void incrementNoLock() {
             count = count + 1;
         }
-        public void decrementNoLockProblem() {
+        public void decrementNoLock() {
             count = count - 1;
         }
 

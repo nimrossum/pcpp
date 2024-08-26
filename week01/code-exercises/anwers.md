@@ -56,3 +56,12 @@ The happens before relation describes the following:
 $$A \rightarrow B \rightarrow C \rightarrow D \rightarrow E $$
 
 This prevents undesirable interleavings.
+
+## 1.9
+
+```
+count: 0  1      2     3     1     2     3
+t1:      r1 w1 r2 w2 r3 w3
+t2:      r1               w1  r2 w2 r3 w3
+```
+So 3 is the lowest possible value of count after the program has executed.
