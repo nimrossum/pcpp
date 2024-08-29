@@ -24,6 +24,14 @@ The goals of this lecture are:
 
 * Tony Hoare's paper introducing monitors.
   * C. A. R. Hoare. [Monitors: an operating system structuring concept](https://dl-acm-org.ep.ituproxy.kb.dk/doi/pdf/10.1145/355620.361161). Communications of the ACM. Volume 17. Issue 10. 1974.
+  
+* Official documentation of the Java Memory Model in the Java Language Specification (JLS)
+  * [Threads and Locks](https://docs.oracle.com/javase/specs/jls/se17/html/jls-17.html).
+
+* Paper introducing the Java Memory Model
+  * Jeremy Manson, William Pugh and Sarita V. Adve. [The Java Memory Model](https://dl-acm-org.ep.ituproxy.kb.dk/doi/abs/10.1145/1040305.1040336). In Proceedings of the 32nd ACM SIGPLAN-SIGACT symposium on Principles of programming languages (POPL'05).
+  
+
 
 ## Lecture slides
 
