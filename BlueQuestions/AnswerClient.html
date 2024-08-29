@@ -1,5 +1,5 @@
 <!--PCPP  Answerclient: version with multiple Questions 
-JSt August 9, 2024 -->
+JSt August 27, 2024 -->
 
 <html>
  <meta charset="UTF-8">
@@ -27,9 +27,7 @@ JSt August 9, 2024 -->
 
   function findQuestion(received){
     //returns question field in JSON object returned by load
-    let parts= received.split(",");
-    let question= parts[0].split(":");
-    return question[1].substring(1, question[1].length-1);
+    return JSON.parse(received)[0]['question'];
   }
 
   function showNext() {
