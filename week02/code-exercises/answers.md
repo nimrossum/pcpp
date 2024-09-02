@@ -55,3 +55,7 @@ Yes it is possible, because of CPU cache layers.
 ### 2
 
 By synchronizing the methods of MutableInteger, we have established a happens before relation, which lets the Java Compiler know that the values must be moved out of L0 cache and moved to main memory, so that the other thread can see the changes.
+
+### 3
+
+Reverting the `.get()` to be non-synchronized means that the Java Compiler can no longer establish a happens-before relation and thus it does not know that it needs to store the integer further down in the memory hierarchy, specifically in the main memory.
