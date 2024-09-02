@@ -22,11 +22,11 @@ public class TestMutableInteger {
 
 class MutableInteger {
     // WARNING: ready for usage by concurrent programs
-    private int value = 0;
-    public synchronized void  set(int value) {
+    private volatile int value = 0;
+    public void  set(int value) {
         this.value = value;
     }
-    public synchronized int get() {
+    public int get() {
         return value;
     }
 }
