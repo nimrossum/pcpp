@@ -2,10 +2,13 @@
 // sestoft@itu.dk * 2015-10-29
 package exercises02;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class TestLocking0 {
     public static void main(String[] args) {
         final int count = 1_000_000;
-        Mystery m = new Mystery();
+        Mystery2 m = new Mystery2();
         Thread t1 = new Thread(() -> {
                 for (int i=0; i<count; i++)
                     m.addInstance(1);
@@ -33,5 +36,37 @@ class Mystery {
 
     public static synchronized double sum() {
         return sum;
+    }
+}
+
+class Mystery2 {
+    private static double sum = 0;
+    private static Lock lock = new ReentrantLock();
+
+    public static synchronized void addStatic(double x) {
+        lock.lock();
+        try {
+            sum += x;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public synchronized void addInstance(double x) {
+        lock.lock();
+        try {
+            sum +=x;
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public static synchronized double sum() {
+        lock.lock();
+        try {
+            return sum;
+        } finally {
+            lock.unlock();
+        }
     }
 }

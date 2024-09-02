@@ -76,3 +76,7 @@ There are race conditions, we don't get the correct sum.
 
 When an instance method is synchronized, it uses the lock for that instance.
 When a static method is synchronized, it uses a lock for that static class. In this case, we are mixing static and instance calls, so we are not using the same lock.
+
+### 3
+
+We implemented a new version that uses a shared lock across instance and static method calls. This ensures that there are no race conditions.
