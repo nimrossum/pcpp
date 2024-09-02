@@ -51,3 +51,7 @@ T2
 We observed that the thread waited forever.
 
 Yes it is possible, because of CPU cache layers.
+
+### 2
+
+By synchronizing the methods of MutableInteger, we have established a happens before relation, which lets the Java Compiler know that the values must be moved out of L0 cache and moved to main memory, so that the other thread can see the changes.

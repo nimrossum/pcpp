@@ -21,12 +21,12 @@ public class TestMutableInteger {
 }
 
 class MutableInteger {
-    // WARNING: Not ready for usage by concurrent programs
+    // WARNING: ready for usage by concurrent programs
     private int value = 0;
-    public void set(int value) {
+    public synchronized void  set(int value) {
         this.value = value;
     }
-    public int get() {
+    public synchronized int get() {
         return value;
     }
 }
