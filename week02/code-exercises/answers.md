@@ -65,3 +65,9 @@ Reverting the `.get()` to be non-synchronized means that the Java Compiler can n
 The volatile keyword tells the Java Compiler that the value of the variable can be changed by other threads. This means that the value of the variable is not stored in the CPU cache, but in the main memory, so that other threads can see the changes.
 
 Removing the locks and marking the variable as volatile will make the program work as expected, however, this does not make the code thread-safe. The volatile keyword only ensures that the value is stored in main memory, but it does not ensure that the value is updated atomically.
+
+## Exercise 2.3
+
+### 1
+
+There are race conditions, we don't get the correct sum.
