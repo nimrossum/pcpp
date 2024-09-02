@@ -18,7 +18,7 @@ A: Fetching a web page is an example of inherent concurrency.
 
 The thread has access to shared and local memory.
 
-![alt text](week01/code-exercises/week01exercises/image.png)
+![alt text](../week01/code-exercises/week01exercises/image.png)
 
 Concurrency: Interleaved execution, can run on a single core or multiple.
 Parallelism: Simultaneous execution, requires multiple cores.
@@ -49,7 +49,7 @@ counter = temp + 1;
 
 ## States of a thread
 
-![alt text](week01/code-exercises/week01exercises/image-1.png)
+![alt text](../week01/code-exercises/week01exercises/image-1.png)
 
 It can either be ready, running or blocked.
 
@@ -82,7 +82,7 @@ When asked about interleaving, use the following synstax:
 ```
 
 Example:
-![alt text](week01/code-exercises/week01exercises/image-2.png)
+![alt text](../week01/code-exercises/week01exercises/image-2.png)
 
 ## Race condition
 
@@ -178,3 +178,8 @@ Contains:
 
 - Implemented in Java as classes
 
+## Solution to Readers-Writers Problem using Monitors
+
+Slide 13
+
+![alt text](image.png)
