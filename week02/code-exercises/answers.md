@@ -2,47 +2,18 @@
 
 ### 1
 
-We identified that one of the two threads used its own lock, while the other thread used a shared lock. This caused the threads to interleave, as the shared lock was not used to protect the critical section.
+Our solution is fairly fair, since both readers and writers will eventually get access to the critical section.
 
-The solution was to ensure they both used the method that used the same lock. We did this by using the static method instead of the instance method, as the synchronized keyword locks the class object. If it is a static method, the static class is locked, while if it's a non-static method, the instance object is locked, which is local to the thread.
+Writers do not wait for readers to finish before flagging that they want to write, they only wait for the write spot to be available before going in line and waiting for the rest of the readers to finish reading, before being allowed to write.
+
+However, since we are not using a fair ReentrantLock, the solution currently favors writers more than readers.
+
 
 ### 2
 
-Our solution does not seem fair, as a single thread periodically exhausts the lock.
+Our solution does not seem fair, as reader threads are favored over writer threads.
 
-Before fair:
-
-```
-T2
-T2
-T2
-T2
-T2
-T2
-T1
-T1
-T1
-T2
-T2
-T2
-T2
-T2
-T2
-```
-
-After fair:
-
-```
-T2
-T1
-T2
-T1
-T2
-T1
-T2
-T1
-T2
-```
+We solve this by introducing a fair reentrant lock rather than using synchronized methods. We also queue writers as soon as they want to write and another writer is done writing.
 
 ## Exercise 2.2
 
