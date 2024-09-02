@@ -71,3 +71,8 @@ Removing the locks and marking the variable as volatile will make the program wo
 ### 1
 
 There are race conditions, we don't get the correct sum.
+
+### 2
+
+When an instance method is synchronized, it uses the lock for that instance.
+When a static method is synchronized, it uses a lock for that static class. In this case, we are mixing static and instance calls, so we are not using the same lock.
