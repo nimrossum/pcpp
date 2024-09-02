@@ -80,3 +80,7 @@ When a static method is synchronized, it uses a lock for that static class. In t
 ### 3
 
 We implemented a new version that uses a shared lock across instance and static method calls. This ensures that there are no race conditions.
+
+### 4
+
+Using the intrinsic lock on would not be necessary, as it would not introduce a race condition to the program if we removed the synchronized keyword from the sum method, since at that point in the program, the secondary threads has already been joined with the main thread. In other words, to remove the intrinsic lock would not introduce a race condition in the program.
