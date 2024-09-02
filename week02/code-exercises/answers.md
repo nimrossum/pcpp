@@ -43,3 +43,11 @@ T2
 T1
 T2
 ```
+
+## Exercise 2.2
+
+### 1
+
+We observed that the thread waited forever.
+
+Yes it is possible, because of CPU cache layers.
