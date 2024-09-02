@@ -183,3 +183,35 @@ Contains:
 Slide 13
 
 ![alt text](image.png)
+
+```java
+public class ReadWriteMonitor {
+  private int readers = 0;
+  private boolean writer = false;
+  private Lock lock = new ReentrantLock();
+  private Condition condition = lock.newCondition();
+}
+```
+
+## Fairness in Monitors
+(used to be queues, but are implemented more efficiently no)
+
+- Lock queue
+- Condition queue
+
+The queue is not deterministic, but it is fair.
+
+You need to specify `fair` to `true` to make the ReentrantLock operate as a fair queue.
+
+The condition queue is
+
+## Fairness
+
+In this course, fairness is the lack of starvation.
+
+## Spurious wakeups
+
+Sometimes a thread can wake up without being signaled. This is called a spurious wakeup.
+
+```java
+sync
