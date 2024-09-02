@@ -5,7 +5,7 @@ package lecture02;
 public class ReadersWriters {
 
     public ReadersWriters() {
-        ReadWriteMonitor m = new ReadWriteMonitor();
+        FairReadWriteMonitor m = new FairReadWriteMonitor();
 
         final int numReadersWriters = 10;
 
