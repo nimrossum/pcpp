@@ -1,3 +1,5 @@
+https://quizlet.com/708126104/flashcards?funnelUUID=195beb86-b516-430a-a532-e3a747bad58f
+
 # Lecture 1
 
 The turing machine did not have concurrency.
@@ -16,7 +18,7 @@ A: Fetching a web page is an example of inherent concurrency.
 
 The thread has access to shared and local memory.
 
-![alt text](image.png)
+![alt text](week01/code-exercises/week01exercises/image.png)
 
 Concurrency: Interleaved execution, can run on a single core or multiple.
 Parallelism: Simultaneous execution, requires multiple cores.
@@ -47,7 +49,7 @@ counter = temp + 1;
 
 ## States of a thread
 
-![alt text](image-1.png)
+![alt text](week01/code-exercises/week01exercises/image-1.png)
 
 It can either be ready, running or blocked.
 
@@ -80,7 +82,7 @@ When asked about interleaving, use the following synstax:
 ```
 
 Example:
-![alt text](image-2.png)
+![alt text](week01/code-exercises/week01exercises/image-2.png)
 
 ## Race condition
 
@@ -126,3 +128,24 @@ Examples:
 Examples:
 
 - Virtualization / Shared resources
+
+# Lecture 2
+
+Avoiding Mutual Exclusion
+
+1. Using locks
+2. Using synchronization operations
+
+## Locks
+
+`.lock()` and `.unlock()` are used to create a critical section.
+
+`.lock()` is a blocking operation. This means that it can be deadlocked.
+
+When using locks, we need to be careful to avoid deadlocks.
+
+When using non-blocking operations, we don't have to worry about deadlocks.
+
+## Synchronization operations
+
+
