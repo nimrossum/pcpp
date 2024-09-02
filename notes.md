@@ -131,12 +131,14 @@ Examples:
 
 # Lecture 2
 
+## Recap
+
 Avoiding Mutual Exclusion
 
 1. Using locks
 2. Using synchronization operations
 
-## Locks
+### Locks
 
 `.lock()` and `.unlock()` are used to create a critical section.
 
@@ -146,6 +148,33 @@ When using locks, we need to be careful to avoid deadlocks.
 
 When using non-blocking operations, we don't have to worry about deadlocks.
 
-## Synchronization operations
+### Quiz
 
+Yes, the program cannot deadlock, but be careful.
+
+1. Always unlock in `finally`
+
+### `ReentrantLock`
+
+`Lock` is an interface, so we need to use an implementation of it. One example is `ReentrantLock`.
+
+It acts like a normal lock, but it has some additional features. If you lock twice, you need to unlock twice, since it has an internal counter.
+
+## Readers-Writers Problem
+
+Not solvable only with locks, but can be solved using Monitors.
+
+## Monitors
+
+A Monitor is a structured way of encapsulating data, methods and synchronization in a single modular package.
+
+Contains:
+- Internal state (data)
+- Methods (procedures)
+  - They are all mutually exclusive using locks
+  - Only methods can access the internal state
+- Condition variables
+- Queue of threads waiting for the condition variable
+
+- Implemented in Java as classes
 
