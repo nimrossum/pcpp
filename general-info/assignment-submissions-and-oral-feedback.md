@@ -60,7 +60,7 @@ All members must participate in the oral feedback sessions, recall that each of 
 Each group needs to join a 40 min slot for oral feedback with TAs or teachers.
 Note that slots allow for 6 people, so more than one group can join a slot.
 **You must book a 40 min slot using the Oral Feedback Scheduler activity in LearnIT ([scheduler](https://learnit.itu.dk/mod/organizer/view.php?id=206699)).**
-The slot you choose is recurrent: it will take place on weeks 37, 39, 41, 45, 47 and 49  on the selected day and time.
+The slot you choose is recurrent: it will take place on weeks 37, 39, 43, 45, 47 and 49  on the selected day and time.
 **All members of the group must individually sign up in the same slot.**
 TAs and teachers will make available several 40 min slots from which you can choose.
 

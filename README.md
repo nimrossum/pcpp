@@ -10,7 +10,7 @@ In this MSc course, you learn how to write correct and efficient concurrent and 
 Each week we will update this repository with the material used in this week.
 
 
-## Lectures Schedule (Tentative)
+## Lectures Schedule
 
 | Lecture | Week | Topic                                              | Speaker (tentative)      |
 |---------|------|----------------------------------------------------|--------------------------|
