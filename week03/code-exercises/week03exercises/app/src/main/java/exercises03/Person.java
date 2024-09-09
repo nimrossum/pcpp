@@ -1,7 +1,6 @@
 package exercises03;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.Delayed;
 
 public class Person {
 
@@ -51,5 +50,28 @@ public class Person {
 
     public synchronized void setName(String newName){
         name = newName;
+    }
+
+    // 3.2.3
+    public static void main(String[] args) {
+        Runnable createPersons = () -> {
+            for (int i = 0; i < 50; i++) {
+                Person person = new Person();
+                person.setName("Person " + person.getId());
+                person.changeAddressAndZip( "Some Address " + person.getId(), 12345);
+                System.out.println("Created " + person.getName() + " with ID: " + person.getId());
+            }
+        };
+
+        // Create several threads to create and use Person instances
+        Thread t1 = new Thread(createPersons);
+        Thread t2 = new Thread(createPersons);
+        Thread t3 = new Thread(createPersons);
+
+        t1.start(); t2.start(); t3.start();
+
+        try {
+            t1.join(); t2.join(); t3.join();
+        } catch (InterruptedException ignored) {}
     }
 }
