@@ -30,3 +30,8 @@ multiple objects ending up with the same id.
 
 ### 3
 A main method has been added to Person.java which creates instances of and uses the Person class
+
+### 4
+No errors were found, but this is not enough to confirm that the class is thread safe. 
+Concurrency issues may happen very rarely so should be arrived at analytically to say anything
+with certainty.
