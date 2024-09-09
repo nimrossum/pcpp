@@ -17,3 +17,13 @@ In order for the bounded buffer to be thread safe it must live up to three crite
 We do not believe it is possible. Barriers serve a different purpose compared to semaphores, 
 that is not applicable to this problem. Barriers wait for several threads to reach some state
 before proceeding. Here we instead need to dynamically and independently let them interact
+
+
+## Exercise 3.2
+### 1 
+The Person class has been implemented
+
+### 2
+Person is thread safe because every method is using intrinsic locks with the synchronized keyword.
+In the constructor we are using a synchronized block with a shared static lock. This is to avoid
+multiple objects ending up with the same id.
