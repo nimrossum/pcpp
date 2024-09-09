@@ -27,3 +27,6 @@ The Person class has been implemented
 Person is thread safe because every method is using intrinsic locks with the synchronized keyword.
 In the constructor we are using a synchronized block with a shared static lock. This is to avoid
 multiple objects ending up with the same id.
+
+## 3
+A main method has been added to Person.java which creates instances of and uses the Person class
