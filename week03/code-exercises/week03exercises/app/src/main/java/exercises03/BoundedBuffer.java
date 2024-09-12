@@ -3,7 +3,7 @@ package exercises03;
 import java.util.LinkedList;
 import java.util.concurrent.Semaphore;
 
-public class BoundedBuffer<T> implements BoundedBufferInteface{
+public class BoundedBuffer<T> implements BoundedBufferInteface<T>{
 
     private final LinkedList<T> queue;
     private final Semaphore filledSlots;
@@ -16,7 +16,7 @@ public class BoundedBuffer<T> implements BoundedBufferInteface{
     }
 
     @Override
-    public Object take() throws Exception {
+    public T take() throws Exception {
 
         filledSlots.acquire(); // Wait for a filled slot
 
@@ -26,13 +26,9 @@ public class BoundedBuffer<T> implements BoundedBufferInteface{
     }
 
     @Override
-    @SuppressWarnings("unchecked")
-    public void insert(Object elem) throws Exception {
+    public void insert(T elem) throws Exception {
         emptySlots.acquire(); // Wait for an empty slot to be available
-        try {
-            queue.add((T)elem); // Add the item to the queue
-        } finally {
-            filledSlots.release(); // Release a new filled slot
-        }
+        queue.add(elem); // Add the item to the queue
+        filledSlots.release(); // Release a new filled slot
     }
 }
