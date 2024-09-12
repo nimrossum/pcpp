@@ -12,9 +12,9 @@ public class Person {
     private volatile int zip;
     private volatile String address;
 
-    public Person(long customGlobalId){
+    public Person(long customGlobalId) {
         synchronized (globalIdLock) {
-            if(firstPerson){
+            if (firstPerson) {
                 globalID = customGlobalId;
             }
             this.id = globalID;
@@ -54,7 +54,7 @@ public class Person {
 
     // 3.2.3
     public static void main(String[] args) {
-        Runnable createPersons = () -> {
+        Runnable createPeople = () -> {
             for (int i = 0; i < 50; i++) {
                 Person person = new Person();
                 person.setName("Person " + person.getId());
@@ -64,9 +64,9 @@ public class Person {
         };
 
         // Create several threads to create and use Person instances
-        Thread t1 = new Thread(createPersons);
-        Thread t2 = new Thread(createPersons);
-        Thread t3 = new Thread(createPersons);
+        Thread t1 = new Thread(createPeople);
+        Thread t2 = new Thread(createPeople);
+        Thread t3 = new Thread(createPeople);
 
         t1.start(); t2.start(); t3.start();
 
