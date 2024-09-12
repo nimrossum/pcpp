@@ -213,5 +213,12 @@ In this course, fairness is the lack of starvation.
 
 Sometimes a thread can wake up without being signaled. This is called a spurious wakeup.
 
-```java
-sync
+### A semaphore
+
+A semaphore is a generalization of a lock with a limit of how many threads can access the critical section at the same time.
+
+Semaphore has a counter that is set at an initial value.
+
+The counter determines how big of a pool of keys are available.
+
+The semaphore has a counter that is decremented when a thread enters the critical section and incremented when it leaves.
