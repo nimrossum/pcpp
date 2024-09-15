@@ -34,7 +34,7 @@ public class CounterTest {
 
     private Counter count;
     private CyclicBarrier barrier;
-    // You may use a Thread Pool to increase the performance of the test (Thread Pools will be explained in week 05)
+    // You may use a Thread Pool to increase the performance of the test (Thread Pools will be explained in week 09)
     // private final static ExecutorService pool = Executors.newCachedThreadPool();
 
 
