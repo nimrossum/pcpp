@@ -4,4 +4,4 @@ classpath = .
 sourcepath = .
 
 # this should produce a deadlock
-target.args = 2,4,1
+target.args = 2,10,10

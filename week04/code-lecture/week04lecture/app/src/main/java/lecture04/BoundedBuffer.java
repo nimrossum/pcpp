@@ -47,7 +47,7 @@ class BoundedBufferMonitor<E> implements BoundedBuffer<E> {
             while(numElems >= items.length) notFull.await();
             doInsert(element);
             numElems++;
-            notEmpty.signal();
+            // notEmpty.signal();
         }
         catch (InterruptedException e) {
             e.printStackTrace();

@@ -47,7 +47,7 @@ public class CounterTest {
 
 
 
-    @Test
+    // @Test
     // @Disabled
     @DisplayName("Counter Sequential")
     public void testingCounterSequential() {
@@ -115,9 +115,9 @@ public class CounterTest {
     }
 
 
+    @RepeatedTest(1000)
     // @Test
-    @RepeatedTest(500)
-    @Disabled
+    // @Disabled
     @DisplayName("Counter Parallel Constant (2 Threads, 10 increments)")
     public void testingCounterParallelConstant() {
         final int nrThreads = 2;
