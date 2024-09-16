@@ -31,7 +31,6 @@ class ConcurrentIntegerSetBuggy implements ConcurrentIntegerSet {
     }
 }
 
-// TODO: Fix this class to pass your tests
 class ConcurrentIntegerSetSync implements ConcurrentIntegerSet {
     final private Set<Integer> set;
 
@@ -39,15 +38,15 @@ class ConcurrentIntegerSetSync implements ConcurrentIntegerSet {
         this.set = new HashSet<Integer>();
     }
 
-    public boolean add(Integer element) {
+    public synchronized boolean add(Integer element) {
         return set.add(element);
     }
 
-    public boolean remove(Integer element) {
+    public synchronized boolean remove(Integer element) {
         return set.remove(element);
     }
 
-    public int size() {
+    public synchronized int size() {
         return set.size();
     }
 }

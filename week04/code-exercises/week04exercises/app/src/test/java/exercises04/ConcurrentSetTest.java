@@ -20,7 +20,7 @@ public class ConcurrentSetTest {
     private ConcurrentIntegerSet set;
     private static int numThreads = Runtime.getRuntime().availableProcessors() * 2;
     private static ExecutorService pool;
-    
+
     // TODO: Very likely you should add more variables here
 
 
@@ -33,49 +33,45 @@ public class ConcurrentSetTest {
         set = new ConcurrentIntegerSetBuggy();
         // set = new ConcurrentIntegerSetSync();
         // set = new ConcurrentIntegerSetLibrary();
-        
+
         pool = Executors.newCachedThreadPool();
     }
 
     // TODO: Define your tests below
-    
-    @Test
-    public void TestTest() {
-        assertTrue(false);
-    }
-    
-    public static int xorShift() {
+
+    public synchronized static int getNum() {
         long y = System.nanoTime();
-        
+
         y ^= (y << 6);
         y ^= (y >>> 21);
         y ^= (y << 7);
-        
+
         return (int) y;
     }
-    
+
     @RepeatedTest(5000)
     public void Test4_1_integerset_add_is_thread_safe() {
         try{
             CyclicBarrier cb = new CyclicBarrier(numThreads + 1);
-            
+
             Runnable runnable = () -> {
                 try {
                     cb.await();
-                    set.add(xorShift());
+                    int number = getNum();
+                    set.add(number);
                     cb.await();
                 } catch (InterruptedException | BrokenBarrierException e) {
                     throw new RuntimeException(e);
                 }
             };
-            
+
             for (int i = 0; i < numThreads; i++) {
                 pool.execute(runnable);
             }
-            
+
             cb.await();
             cb.await();
-            
+
             assertTrue(set.size() == numThreads);
         }
         catch (Exception e) {
@@ -85,17 +81,17 @@ public class ConcurrentSetTest {
             pool.shutdown();
         }
     }
-    
+
     @RepeatedTest(5000)
     public void Test4_2_integerset_remove_is_thread_safe() {
         try{
             CyclicBarrier cb = new CyclicBarrier(numThreads + 1);
-            
+
             set.add(1);
             set.add(2);
             set.add(3);
             set.add(4);
-            
+
             Runnable runnable = () -> {
                 try {
                     cb.await();
@@ -108,14 +104,14 @@ public class ConcurrentSetTest {
                     throw new RuntimeException(e);
                 }
             };
-            
+
             for (int i = 0; i < numThreads; i++) {
                 pool.execute(runnable);
             }
-            
+
             cb.await();
             cb.await();
-            
+
             assertEquals(0,set.size());
         }
         catch (Exception e) {

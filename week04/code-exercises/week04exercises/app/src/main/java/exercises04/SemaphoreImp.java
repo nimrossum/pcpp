@@ -41,4 +41,8 @@ public class SemaphoreImp {
             lock.unlock();
         }
     }
+
+    public int getState() {
+        return state;
+    }
 }
