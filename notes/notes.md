@@ -69,16 +69,12 @@ In operating systems or in runtime environments such as JVM a scheduler is used 
 
 The scheduler is non-deterministic, meaning that we cannot predict which thread will run next.
 
-## Interlearning syntax
+## Interleaving syntax
 
-When asked about interleaving, use the following synstax:
+When asked about interleaving, use the following syntax:
 
-```html
-<thread
-  >(<step
-    >), <thread>(<step>), …</step></thread></step
-  ></thread
->
+```
+{thread}({step}), {thread}({step})
 ```
 
 Example:
