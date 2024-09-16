@@ -23,7 +23,7 @@ Explain why your solution is correct, and why no other output is possible.
 Note: In your explanation, please use the concepts and vocabulary introduced during the lecture, e.g., critical
 sections, interleavings, race conditions, mutual exclusion, etc
 
-We have eliminated the possibility of unintentional interleaving of operations by locking the critical section of the program when accessed by the threads. In short, we have made 'increment' an atomic operation.
+We have eliminated the possibility of unintentional interleaving of operations by locking the critical section of the program when accessed by the threads. In short, we have made 'increment' an atomic operation. We ensured mutual exclusion in the critical section.
 
 ## 5
 
@@ -140,7 +140,7 @@ Resource utilization: Inherent + Exploitation
 
 Fairness:
 
-- In practive achieved via what is provided via hidden parallization.
+- In practive achieved via what is provided via hidden parallelization.
 - Without fairness, hidden cannot be achieved fairly.
 - Time-sharing is a method for achieving fairness.
   Convenience: Related to fairness - packing: It's easier to pack socks than TV's.
@@ -161,6 +161,6 @@ Virtualization:
   - The graphics card in our computers is a parallel processor with many cores
 - Hidden
   - Virtual machines (VM, Docker)
-  - PyTorch
+  - PyTorch (very optimized, does parallel stuff under the hood, but you as the developer is not exposed to it)
   - Microsoft Parallel Data Structures
   - Web API's

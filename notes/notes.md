@@ -90,10 +90,13 @@ When the result of a computation depends on the order of execution of threads.
 
 ## Data race
 
+- There is no happens before relation between the accesses.
+
 When two concurrent threads
 
 - Access the same memory location
 - At least one access is a write
+
 
 ## Critical section
 

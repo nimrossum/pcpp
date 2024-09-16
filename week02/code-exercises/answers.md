@@ -37,6 +37,8 @@ The volatile keyword tells the Java Compiler that the value of the variable can 
 
 Removing the locks and marking the variable as volatile will make the program work as expected, however, this does not make the code thread-safe. The volatile keyword only ensures that the value is stored in main memory, but it does not ensure that the value is updated atomically.
 
+> Note: The setter does not depend on the previous value, so it is in this case thread safe.
+
 ## Exercise 2.3
 
 ### 1
