@@ -33,4 +33,8 @@ To appear.
 
 ## Exercises
 
-To appear.
+See file [lecture05.pdf](lecture05.pdf).
+
+## Exercises
+
+See file [exercises05.pdf](exercises05.pdf).
