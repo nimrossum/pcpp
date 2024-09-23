@@ -19,7 +19,7 @@ Each week we will update this repository with the material used in this week.
 | 3       | 37   | [Shared memory II](week03/)                        | Raúl                     |
 | 4       | 38   | [Testing & Verification](week04/)                  | Raúl                     |
 | 5       | 39   | [Lock free data structures](week05/)               | Raúl                     |
-| 6       | 40   | Linearizability                                    | Raúl                     |
+| 6       | 40   | [Linearizability](week06/)                         | Raúl                     |
 | 7       | 41   | Guest lecture                                      | Viet (CTO @ Hypefactors) |
 |         | 42   | *No Lecture: Fall break*                           | --                       |
 | 8       | 43   | Performance measurements                           | Jørgen                   |
