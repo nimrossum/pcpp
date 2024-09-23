@@ -32,7 +32,7 @@ public class TestHistograms {
     // The imports above are just for convenience, feel free add or remove imports
 
     // TODO: 5.1.3
-    @Test
+    @RepeatedTest(20)
     public void TestCountFactors() {
         Histogram seqHistogram = new Histogram1(5000);
         Histogram casHistogram = new CasHistogram(5000);
@@ -71,5 +71,4 @@ public class TestHistograms {
         }
         return factorCount;
     }
-
 }
