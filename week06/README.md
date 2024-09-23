@@ -1,4 +1,4 @@
-# Lecture 8: Linearizability
+# Lecture 6: Linearizability
 
 ## Goals
 
