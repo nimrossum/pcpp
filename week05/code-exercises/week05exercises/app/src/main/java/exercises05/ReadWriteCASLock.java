@@ -6,7 +6,7 @@ package exercises05;
 
 // Very likely you will need some imports here
 
-class ReadWriteCASLock implements SimpleRWTryLockInterface {
+/*class ReadWriteCASLock implements SimpleRWTryLockInterface {
 
     // TODO: Add necessary field(s) for the class
 
@@ -53,4 +53,4 @@ class ReadWriteCASLock implements SimpleRWTryLockInterface {
         // TODO: Constructor
 
     }
-}
+}*/

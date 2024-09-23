@@ -32,11 +32,32 @@ public class TestHistograms {
     // The imports above are just for convenience, feel free add or remove imports
 
     // TODO: 5.1.3
+    @Test
+    public void TestCountFactors() {
+        Histogram seqHistogram = new Histogram1(5000);
+        Histogram casHistogram = new CasHistogram(5000);
 
+        //CyclicBarrier barrier = new CyclicBarrier(5000+1);
 
+        for(int i = 0; i < 5000; i++){
+            seqHistogram.increment(countFactors(i));
+            int finalI = i;
+            new Thread(() -> {
+                try {
+                    //barrier.await();
+                    casHistogram.increment(countFactors(finalI));
+                    //barrier.await();
+                } catch (Exception ignored) {}
+            }).start();
+        }
+        //barrier.await(); // Open the floodgates
+        //barrier.await(); // Close the floodgates
 
-
-
+        for(int i = 0; i < seqHistogram.getSpan(); i++){
+            //System.out.println(seqHistogram.getCount(i) + " - " + casHistogram.getCount(i));
+            assertEquals(seqHistogram.getCount(i),casHistogram.getCount(i));
+        }
+    }
     // Function to count the numbe of prime factors of a number `p`
     private static int countFactors(int p) {
         if (p < 2) return 0;
