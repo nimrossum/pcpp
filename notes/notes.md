@@ -221,3 +221,39 @@ Semaphore has a counter that is set at an initial value.
 The counter determines how big of a pool of keys are available.
 
 The semaphore has a counter that is decremented when a thread enters the critical section and incremented when it leaves.
+
+# Lecture 5
+
+## Lock Free Data Structures
+
+### Compare and Swap
+
+A compare and swap operation is an atomic operation that compares the value of a memory location to a given value and, only if they are the same, modifies the value of that memory location to a given new value.
+
+It is translated to `CMPXCHG` by the compiler.
+
+It is useful for lock-free data structures.
+
+It is a safe way to update a value in a shared memory location, assuming that it has the same value as when it was read.
+
+You also need to
+
+## Main notions of progress in non-blocking data structures / computation
+
+1. **Wait-free**: A method of an object is wait-free if every call finishes its execution in a finite number of steps.
+2. **Lock-free**: A method of an object is lock-free if executing the method guarantees that some method call (including concurrent) finishes in a finite number of steps.
+3. **Obstruction-free**: A method of an object is obstruction-free if, from any point after which it executes in isolation, it finishes in a finite number of steps.
+
+Wait free implies lock free and obstruction free.
+Lock-free implies obstruction free.
+
+If there is a while loop that repeats an operation, it will be at least lock-free.
+
+> [!NOTE]
+> Remember, for lock-free: If this one fails, then it means that another one succeeds.
+
+## Why is non-blocking not the same as busy-waiting?
+
+Threads cannot wait forever because other thread finished incorrectly.
+Even in obstruction-free, completion must be guaranteed when the thread runs in isolation
+
