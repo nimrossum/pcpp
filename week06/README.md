@@ -30,10 +30,12 @@ The goals of this lecture are:
 
 * David Chase and Yossi Lev. [Dynamic Circular Work-Stealing Deque](https://www.dre.vanderbilt.edu/~schmidt/PDF/work-stealing-dequeue.pdf). ACM Symposium on Parallelism in Algorithms and Architectures (SPAA). 2005.
 
+* Jeremy Manson, William Pugh and Sarita V. Adve. [The Java Memory Model](https://dl-acm-org.ep.ituproxy.kb.dk/doi/abs/10.1145/1040305.1040336). In Proceedings of the 32nd ACM SIGPLAN-SIGACT symposium on Principles of programming languages (POPL'05). (part of the optional readings in week 2)
+
 ## Lecture slides
 
-To appear.
+See file [lecture06.pdf](./lecture06.pdf).
 
-## Exercises
+### Exercises
 
-To appear.
+See file [exercises06.pdf](./exercises06.pdf).
