@@ -37,7 +37,89 @@ class TestLockFreeStack {
 
     // The imports above are just for convenience, feel free add or remove imports
 
-    // TODO: 6.2.2 - Test push
+    // 6.2.2 - Test push
+    @RepeatedTest(100)
+    public void testPush() {
+        LockFreeStack<Integer> stack = new LockFreeStack<>();
+        for (int i = 0; i < 1000; i++) {
+            new Pusher(stack, i).run();
+        }
 
-    // TODO: 6.2.3 - Test pop
+        int sum = 0;
+        int realSum = 0;
+
+        for (int i = 0; i < 1000; i++) {
+            sum += stack.pop();
+            realSum += i;
+        }
+        assertEquals(realSum, sum);
+    }
+
+    // 6.2.3 - Test pop
+    @RepeatedTest(100)
+    public void testPop() {
+        // Fill the stack
+        LockFreeStack<Integer> stack = new LockFreeStack<>();
+        AtomicInteger sum = new AtomicInteger(0);
+        int expectedSum = 0;
+
+        for (int i = 0; i < 1000; i++) {
+            stack.push(i);
+            expectedSum += i;
+        }
+        // Pop the stack
+
+        for (int i = 0; i < 1000; i++) {
+            new Popper(stack, sum).run();
+        }
+
+        assertEquals(expectedSum, sum.get());
+    }
+
+    @RepeatedTest(100)
+    public void testPushAndPop() {
+        LockFreeStack<Integer> stack = new LockFreeStack<>();
+        AtomicInteger sum = new AtomicInteger(0);
+        
+        for (int i = 0; i < 1000; i++) {
+            new Pusher(stack, i).run();
+            new Popper(stack, sum).run();
+        }
+
+        assertEquals(null, stack.pop());
+    }
+
+}
+
+class Pusher implements Runnable {
+
+    private LockFreeStack<Integer> stack;
+    private int i;
+
+    public Pusher(LockFreeStack<Integer> s, Integer i) {
+        this.stack = s;
+        this.i = i;
+    }
+
+    @Override
+    public void run() {
+        stack.push(i);
+    }
+
+}
+
+class Popper implements Runnable {
+
+    private LockFreeStack<Integer> stack;
+    private AtomicInteger sum;
+
+    public Popper(LockFreeStack<Integer> s, AtomicInteger sum) {
+        this.stack = s;
+        this.sum = sum;
+    }
+
+    @Override
+    public void run() {
+        sum.addAndGet(stack.pop());
+    }
 }

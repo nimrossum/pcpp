@@ -14,7 +14,7 @@ class LockFreeStack<T> {
         do {
             oldHead      = top.get();
             newHead.next = oldHead;
-        } while (!top.compareAndSet(oldHead,newHead));
+        } while (!top.compareAndSet(oldHead,newHead)); // PU1
 
     }
 
@@ -22,10 +22,10 @@ class LockFreeStack<T> {
         Node<T> newHead;
         Node<T> oldHead;
         do {
-            oldHead = top.get();
+            oldHead = top.get();                       // PO2
             if(oldHead == null) { return null; }
             newHead = oldHead.next;
-        } while (!top.compareAndSet(oldHead,newHead));
+        } while (!top.compareAndSet(oldHead,newHead)); // PO1
 
         return oldHead.value;
     }

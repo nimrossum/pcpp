@@ -52,3 +52,51 @@ Yes, the execution is linearizable. As there is overlap between the operations, 
     B: --|       q.deq(y)          |->
 
 No, this execution is not linearizable, as it violates the standard specification of a sequential FIFO queue. First in, First out, meaning that since we enquee `x` before `y`, we need to dequeue `x` and not `y` first. Therefore, the execution is not linearizable.
+
+# Exercise 6.2
+
+## 1
+
+`push` linearization points:
+
+```java
+17        } while (!top.compareAndSet(oldHead,newHead)); // PU1
+```
+
+`pop` linearization points:
+
+```java
+28        } while (!top.compareAndSet(oldHead,newHead)); // PO1
+```
+
+These linearization points show that the implementation of the Treiber stack is correct, because if two threads execute push and pop concurrently, the linearization points ensure that the stack is linearizable.
+
+## 4
+
+No, we realized that we were missing a linearization point in the case of the stack being empty and returning null.
+
+We added a test to cover this, that both pushes and pop's integers from the stack and asserts that null is returned in the end.
+
+## Exercise 6.3
+
+We recall that:
+
+1. **Wait-free**: A method of an object is wait-free if every call finishes its execution in a finite number of steps.
+2. **Lock-free**: A method of an object is lock-free if executing the method guarantees that some method call (including concurrent) finishes in a finite number of steps.
+3. **Obstruction-free**: A method of an object is obstruction-free if, from any point after which it executes in isolation, it finishes in a finite number of steps.
+
+**writerTryLock**
+
+it is obstruction-free, because if the writer is not locked, it will finish in a finite number of steps.
+
+**writerUnlock**
+
+it is lock-free, because it guarantees that some method call finishes in a finite number of steps.
+
+**readerTryLock**
+
+it is obstruction-free, because if the writer is not locked, it will finish in a finite number of steps. If a writer has locked, it will be blocked.
+
+**readerUnlock**
+
+it is lock-free, because it guarantees that some method call finishes in a finite number of steps.
