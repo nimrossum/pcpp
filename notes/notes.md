@@ -257,3 +257,15 @@ If there is a while loop that repeats an operation, it will be at least lock-fre
 Threads cannot wait forever because other thread finished incorrectly.
 Even in obstruction-free, completion must be guaranteed when the thread runs in isolation
 
+## Sequential consistency
+
+A concurrent execution is sequentially consistent $\iff$ it a reordering of operations producing a sequential execution where:
+
+1. Operations happen one-at-a-time
+2. Program order is preserved (for each thread)
+3. The execution satisfies the specification of the object
+
+## Linearizability
+
+Linearizability extends sequential consistency by requiring that
+the real time order of the execution is preserved. This means that the
