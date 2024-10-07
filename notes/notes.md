@@ -259,7 +259,7 @@ Even in obstruction-free, completion must be guaranteed when the thread runs in 
 
 ## Sequential consistency
 
-A concurrent execution is sequentially consistent $\iff$ it a reordering of operations producing a sequential execution where:
+A concurrent execution is sequentially consistent $\iff$ a reordering of operations producing a sequential execution where:
 
 1. Operations happen one-at-a-time
 2. Program order is preserved (for each thread)
@@ -267,5 +267,4 @@ A concurrent execution is sequentially consistent $\iff$ it a reordering of oper
 
 ## Linearizability
 
-Linearizability extends sequential consistency by requiring that
-the real time order of the execution is preserved. This means that the
+Linearizability extends sequential consistency by requiring that the real time order of the execution is preserved. This means that the
