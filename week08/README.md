@@ -37,7 +37,7 @@ for example by executing:
 ## Lecture slides
 Could be updated, so please check that you have the latest version
 
-[lecture08.pdf Preliminary version](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week08/lecture08Preliminary.pdf)
+[lecture08.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week08/lecture08.pdf)
 
 
 ## Exercises
