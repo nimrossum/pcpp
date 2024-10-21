@@ -1,0 +1,20 @@
+> Task :app:compileJava UP-TO-DATE
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes UP-TO-DATE
+
+> Task :app:run
+# OS:   Windows 11; 10.0; amd64
+# JVM:  Microsoft; 17.0.5
+# CPU:  Intel64 Family 6 Model 158 Stepping 10, GenuineIntel; 12 "cores"
+# Date: 2024-10-21T11:44:01+0200
+Mark 7 measurements
+Point creation                       51.8 ns       0.29    8388608
+Thread's work                      6985.8 ns      16.02      65536
+Thread create                      1140.3 ns       8.51     262144
+Thread create start              102511.3 ns    1432.48       4096
+Thread create start join         286112.0 ns    5786.16       1024
+ai value = 1413060000
+Uncontended lock                     25.1 ns       0.01   16777216
+
+BUILD SUCCESSFUL in 48s
+3 actionable tasks: 1 executed, 2 up-to-date
