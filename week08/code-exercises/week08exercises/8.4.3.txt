@@ -1,0 +1,9 @@
+> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+test_time_search                4474404.4 ns  326711.64         64
+
+BUILD SUCCESSFUL in 7s
+3 actionable tasks: 2 executed, 1 up-to-date

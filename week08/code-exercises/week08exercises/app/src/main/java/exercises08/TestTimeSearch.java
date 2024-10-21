@@ -1,3 +1,4 @@
+
 package exercises08;
 // jst@itu.dk * 2023-09-05
 
@@ -10,7 +11,12 @@ import benchmarking.Benchmark;
 import benchmarking.Benchmarkable;
 
 public class TestTimeSearch {
-  public static void main(String[] args) { new TestTimeSearch(); }
+  public static void main(String[] args) {
+    Benchmark.Mark7("test_time_search", i -> {
+      var hello = new TestTimeSearch();
+      return hello.hashCode();
+    });
+  }
 
   public TestTimeSearch() {
     final String filename = "src/main/resources/long-text-file.txt";
@@ -19,8 +25,8 @@ public class TestTimeSearch {
     final PrimeCounter lc= new PrimeCounter();  //name is a bit misleading, it is just a counter
     String[] lineArray= readWords(filename);
 
-    System.out.println("Array Size: "+ lineArray.length);
-    System.out.println("# Occurences of "+target+ " :"+search(target, lineArray, 0, lineArray.length, lc));
+    // System.out.println("Array Size: "+ lineArray.length);
+    // System.out.println("# Occurences of "+target+ " :"+search(target, lineArray, 0, lineArray.length, lc));
   }
 
   static long search(String x, String[] lineArray, int from, int to, PrimeCounter lc){
@@ -34,7 +40,7 @@ public class TestTimeSearch {
     //Search for occurences of c in line
     String[] arr= line.split(" ");
     int count= 0;
-    for (int i= 0; i<arr.length; i++ ) if ( (arr[i].equals(x)) ) count++;                   
+    for (int i= 0; i<arr.length; i++ ) if ( (arr[i].equals(x)) ) count++;
     return count;
   }
 
@@ -45,5 +51,5 @@ public class TestTimeSearch {
     } catch (IOException exn) { return null;}
   }
 
-  
+
 }
