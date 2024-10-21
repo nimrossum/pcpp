@@ -1,0 +1,10 @@
+> Task :app:compileJava UP-TO-DATE
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes UP-TO-DATE
+
+> Task :app:run
+volatile                              3.5 ns       0.01  134217728
+stable                                3.5 ns       0.01  134217728
+
+BUILD SUCCESSFUL in 20s
+3 actionable tasks: 1 executed, 2 up-to-date
