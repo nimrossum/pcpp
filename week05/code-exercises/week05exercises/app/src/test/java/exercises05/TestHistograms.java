@@ -37,21 +37,24 @@ public class TestHistograms {
         Histogram seqHistogram = new Histogram1(5000);
         Histogram casHistogram = new CasHistogram(5000);
 
-        //CyclicBarrier barrier = new CyclicBarrier(5000+1);
+        CyclicBarrier barrier = new CyclicBarrier(5000+1);
 
         for(int i = 0; i < 5000; i++){
             seqHistogram.increment(countFactors(i));
             int finalI = i;
             new Thread(() -> {
                 try {
-                    //barrier.await();
+                    barrier.await();
                     casHistogram.increment(countFactors(finalI));
-                    //barrier.await();
+                    barrier.await();
                 } catch (Exception ignored) {}
             }).start();
         }
-        //barrier.await(); // Open the floodgates
-        //barrier.await(); // Close the floodgates
+        try {
+            barrier.await(); // Open the floodgates
+            barrier.await(); // Close the floodgates
+        } catch (Exception e) {
+        }
 
         for(int i = 0; i < seqHistogram.getSpan(); i++){
             //System.out.println(seqHistogram.getCount(i) + " - " + casHistogram.getCount(i));
