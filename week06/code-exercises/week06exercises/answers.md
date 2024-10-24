@@ -87,15 +87,15 @@ We recall that:
 
 **writerTryLock**
 
-it is obstruction-free, because if the writer is not locked, it will finish in a finite number of steps.
+it is wait-free, because every call finishes its execution in a finite number of steps.
 
 **writerUnlock**
 
-it is lock-free, because it guarantees that some method call finishes in a finite number of steps.
+it is wait-free, because every call finishes its execution in a finite number of steps.
 
 **readerTryLock**
 
-it is obstruction-free, because if the writer is not locked, it will finish in a finite number of steps. If a writer has locked, it will be blocked.
+it is lock-free, because it guarantees that some method call finishes in a finite number of steps.
 
 **readerUnlock**
 
