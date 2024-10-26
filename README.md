@@ -23,7 +23,7 @@ Each week we will update this repository with the material used in this week.
 | 7       | 41   | Guest lecture                                      | Viet (CTO @ Hypefactors) |
 |         | 42   | *No Lecture: Fall break*                           | --                       |
 | 8       | 43   | [Performance measurements](https://github.itu.dk/jst/PCPP2024-Public/tree/main/week08)                           | Jørgen                   |
-| 9       | 44   | Performance and scalability                        | Jørgen                   |
+| 9       | 44   | [Performance and scalability](https://github.itu.dk/jst/PCPP2024-Public/tree/main/week09)                        | Jørgen                   |
 | 10      | 45   | Parallel Streams+React                             | Jørgen                   |
 | 11      | 46   | Java Networking & Intro to Erlang (TBD)            | Jørgen+Raúl              |
 | 12      | 47   | Message passing I                                  | Raúl                     |
