@@ -27,9 +27,9 @@ The code for the first example is here: [Square Calculator] (https://github.itu.
 ## Lecture slides
 Could be updated, so please check that you have the latest version
 
-[lecture06.pdf ](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week09/lecture09Preliminary.pdf)
+[lecture09.pdf ](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week09/lecture09Preliminary.pdf)
 
 
 ## Exercises
 
-[exercises06.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week09/exercise09.pdf)
+[exercises09.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week09/exercise09.pdf)
