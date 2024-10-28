@@ -19,3 +19,46 @@ If we just start by locking the source (Thread 1: 1, Thread 2: 2), each thread w
 
 ## 9.1.3
 
+We did it.
+
+
+# Exercise 9.2
+
+## 1 and 2
+
+```python
+import math
+
+
+def main():
+    n = 1_000_000
+    n2 = 10_000_000
+    print(est_16(n))
+    print(est_32(n))
+    print(est_16(n2))
+    print(est_32(n2))
+
+
+def est_16(n):
+    return (n * math.log2(n)) / (
+        n + n / 2 + n / 4 + n / 8 + math.log2(n / 16) * (n / 16)
+    )
+
+
+def est_32(n):
+    return (n * math.log2(n)) / (
+        n + n / 2 + n / 4 + n / 8 + n / 16 + math.log2(n / 32) * (n / 32)
+    )
+
+
+if __name__ == "__main__":
+    main()
+```
+
+Output:
+```bash
+6.943048257275727 // 16 core, 1 million elements
+8.290617311976854 // 32 core, 1 million elements
+7.553899150833834 // 16 core, 10 million elements
+9.272018344175157 // 32 core, 10 million elements
+```
