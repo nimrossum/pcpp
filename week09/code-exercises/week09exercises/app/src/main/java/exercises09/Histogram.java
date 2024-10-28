@@ -4,7 +4,7 @@ package exercises09;
 // raup@itu.dk * 05/10/2022
 // jst@itu.dk * 04/10/2023
 
-interface Histogram {
+public interface Histogram {
   public void increment(int bin);
   public int getCount(int bin);
   public int getSpan();

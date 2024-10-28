@@ -6,27 +6,39 @@ package exercises09;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.IntToDoubleFunction;
 import benchmarking.Benchmark;
+import exercises09.Histogram;
+import exercises09.HistogramLocks;
+import exercises09.CasHistogram;
+
 
 class TestCASLockHistogram {
   public static void main(String[] args) {
 
     // Create an object `histogramCAS` with your Histogram CAS implementation from week05
+    Histogram histrogramCAS = new CasHistogram(30);
     // Create an object `histogramLock` using the class in the file HistogramLocks
-    
+    Histogram histogramLock = new HistogramLocks(30);
+
     int noThreads= 16;
-    int range= 100_000;	
+    int range= 100_000;
 
     for (int i= 1; i < noThreads; i++) {
       int threadCount= i;
-      // Benchmark.Mark7( ... using a monitor
+      Benchmark.Mark7( "... using a monitor", (int x) -> {
+          countParallel(range, threadCount, histogramLock);
+          return (double)x;
+      });
     }
 
     for (int i= 1; i < noThreads; i++) {
       int threadCount= i;
-      // Benchmark.Mark7( ... using CAS
+      Benchmark.Mark7("... using CAS", (int x) -> {
+          countParallel(range, threadCount, histrogramCAS);
+          return (double)x;
+      });
     }
   }
-  
+
   // Function to count the prime factors of a number `p`
   private static int countFactors(int p) {
     if (p < 2) return 0;
@@ -35,7 +47,7 @@ class TestCASLockHistogram {
       if (p % k == 0) {
         factorCount++;
         p= p/k;
-      } else 
+      } else
         k= k+1;
     }
     return factorCount;
@@ -46,21 +58,21 @@ class TestCASLockHistogram {
     final int perThread= range / threadCount;
     Thread[] threads= new Thread[threadCount];
     for (int t=0; t<threadCount; t= t+1) {
-      final int from= perThread * t, 
-        to= (t+1==threadCount) ? range : perThread * (t+1); 
+      final int from= perThread * t,
+        to= (t+1==threadCount) ? range : perThread * (t+1);
       threads[t]= new Thread( () -> {
           for (int i= from; i<to; i++) h.increment(countFactors(i));
-                
+
       });
-    } 
-    for (int t= 0; t<threadCount; t= t+1) 
+    }
+    for (int t= 0; t<threadCount; t= t+1)
       threads[t].start();
     try {
-      for (int t= 0; t<threadCount; t= t+1) 
+      for (int t= 0; t<threadCount; t= t+1)
         threads[t].join();
     } catch (InterruptedException exn) { }
   }
-    
+
   // Auxiliary method to print the histogram data
   public static void dump(Histogram histogram) {
     for (int bin= 0; bin < histogram.getSpan(); bin= bin+1) {
