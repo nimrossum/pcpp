@@ -62,3 +62,11 @@ Output:
 7.553899150833834 // 16 core, 10 million elements
 9.272018344175157 // 32 core, 10 million elements
 ```
+
+# Exercise 9.3
+
+## 9.3.1
+
+We noticed that it performs optimally at around 8 threads. After that, it gets slightly worse over time.
+
+![alt text](image.png)
