@@ -70,3 +70,9 @@ Output:
 We noticed that it performs optimally at around 8 threads. After that, it gets slightly worse over time.
 
 ![alt text](image.png)
+
+## 9.3.2
+
+We discovered that futures scale poorly compared to threads.
+
+![alt text](image-1.png)
