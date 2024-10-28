@@ -16,3 +16,6 @@ Thread 1 wants to transfer from account 1 to account 2
 Thread 2 wants to transfer from account 2 to account 1
 
 If we just start by locking the source (Thread 1: 1, Thread 2: 2), each thread would lock and wait for other to be free, but it would never be free since we have created a deadlock. By having comparable id's we can ensure that the threads will always lock the accounts in the same order and therefore never step on each others toes.
+
+## 9.1.3
+

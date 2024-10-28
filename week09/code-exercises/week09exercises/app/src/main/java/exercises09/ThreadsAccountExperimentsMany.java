@@ -1,6 +1,12 @@
 // jst@itu.dk * 04/10/2024
 package exercises09;
+import java.sql.Time;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 public class ThreadsAccountExperimentsMany {
 
@@ -8,24 +14,33 @@ public class ThreadsAccountExperimentsMany {
   static final int NO_TRANSACTION = 5;
   static final int NO_THREADS = 10;
   static final Account[] accounts = new Account[N];
-  static final Thread[] threads = new Thread[NO_THREADS];
+  static final Future[] futures = new Future[NO_THREADS];
+  static final ForkJoinPool pool = new ForkJoinPool(NO_THREADS);
   static Random rnd = new Random();
 
-  public static void main(String[] args){ new ThreadsAccountExperimentsMany(); }
+  public static void main(String[] args) throws InterruptedException{ new ThreadsAccountExperimentsMany(); }
 
-  public ThreadsAccountExperimentsMany(){
+  public ThreadsAccountExperimentsMany() throws InterruptedException{
     for( int i = 0; i < N; i++){
       accounts[i] = new Account(i);
     }
     for( int i = 0; i<NO_THREADS; i++){
-      try{ (threads[i] = new Thread( () -> doNTransactions(NO_TRANSACTION) )).start();}
+      try {
+        futures[i] = pool.submit( () -> {
+          doNTransactions(NO_TRANSACTION);
+        });
+      }
       catch(Error ex){
         System.out.println("At i = " + i + " I got error: " + ex);
         System.exit(0);
       }
     }
-    for( int i = 0; i<NO_THREADS; i++){
-      try {threads[i].join();} catch(Exception dummy){};
+    for (Future f : futures) {
+      try {
+        f.get();
+      } catch (Exception e) {
+        System.out.println("Exception: " + e);
+      }
     }
   }
 
