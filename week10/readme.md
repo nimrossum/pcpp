@@ -22,7 +22,7 @@ The goals of this lecture are:
 
 ## Lecture slides
 
-See file [lecture10.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week10/lecture10Preliminary.pdf).
+See file [lecture10.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week10/lecture10.pdf).
 
 ## Mandatory assignment
 
