@@ -8,7 +8,7 @@
 # CPU:  Intel64 Family 6 Model 158 Stepping 10, GenuineIntel; 12 "cores"
 # Date: 2024-10-21T12:10:01+0200
 countSequential                13434037.8 ns  238876.42         32
-.       1         11823295.9 ns   52803.82         32
+countParallelN       1         11823295.9 ns   52803.82         32
 countParallelN       2          7765870.2 ns   47270.12         64
 countParallelN       3          8559924.4 ns 2888421.73         64
 countParallelN       4          5525000.0 ns   62209.43         64
