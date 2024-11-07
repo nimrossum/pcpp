@@ -57,6 +57,7 @@ public class TestTimeSearch {
 
   private static long countParallelN(String target, String[] lineArray, int N, PrimeCounter lc) {
     // uses N threads to search lineArray
+    // TODO: Save threads in a list and join then all after
       // Search each line of file
       for (int i = 0; i < N; i++) {
         final int j = i;

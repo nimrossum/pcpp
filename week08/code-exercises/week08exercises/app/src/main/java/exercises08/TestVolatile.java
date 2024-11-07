@@ -17,16 +17,12 @@ public class TestVolatile {
   public static void main(String[] args) {
     Benchmark.Mark7("volatile", i -> {
       TestVolatile test = new TestVolatile();
-      for (int j = 0; j < i; j++) {
-        test.vInc();
-      }
+      test.vInc();
       return test.vCtr;
     });
     Benchmark.Mark7("stable", i -> {
       TestVolatile test = new TestVolatile();
-      for (int j = 0; j < i; j++) {
-        test.inc();
-      }
+      test.inc();
       return test.ctr;
     });
   }
