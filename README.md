@@ -12,23 +12,23 @@ Each week we will update this repository with the material used in this week.
 
 ## Lectures Schedule
 
-| Lecture | Week | Topic                                              | Speaker (tentative)      |
-|---------|------|----------------------------------------------------|--------------------------|
-| 1       | 35   | [Intro to concurrency & Mutual exclusion](week01/) | Jørgen+Raúl              |
-| 2       | 36   | [Shared memory I](week02/)                         | Raúl                     |
-| 3       | 37   | [Shared memory II](week03/)                        | Raúl                     |
-| 4       | 38   | [Testing & Verification](week04/)                  | Raúl                     |
-| 5       | 39   | [Lock free data structures](week05/)               | Raúl                     |
-| 6       | 40   | [Linearizability](week06/)                         | Raúl                     |
-| 7       | 41   | Guest lecture                                      | Viet (CTO @ Hypefactors) |
-|         | 42   | *No Lecture: Fall break*                           | --                       |
-| 8       | 43   | [Performance measurements](week08/)                | Jørgen                   |
-| 9       | 44   | [Performance and scalability](week09/)             | Jørgen                   |
-| 10      | 45   | [Parallel Streams+React](week10/)                  | Jørgen                   |
-| 11      | 46   | [Java Networking & Erlang Intro](week11/)          | Jørgen+Raúl              |
-| 12      | 47   | Message passing I                                  | Raúl                     |
-| 13      | 48   | Message Passing II                                 | Raúl                     |
-| 14      | 49   | Exam prep                                          | Jørgen+Raúl              |
+| Lecture | Week | Topic                                               | Speaker (tentative)      |
+|---------|------|-----------------------------------------------------|--------------------------|
+| 1       | 35   | [Intro to concurrency & Mutual exclusion](week01/)  | Jørgen+Raúl              |
+| 2       | 36   | [Shared memory I](week02/)                          | Raúl                     |
+| 3       | 37   | [Shared memory II](week03/)                         | Raúl                     |
+| 4       | 38   | [Testing & Verification](week04/)                   | Raúl                     |
+| 5       | 39   | [Lock free data structures](week05/)                | Raúl                     |
+| 6       | 40   | [Linearizability](week06/)                          | Raúl                     |
+| 7       | 41   | Guest lecture                                       | Viet (CTO @ Hypefactors) |
+|         | 42   | *No Lecture: Fall break*                            | --                       |
+| 8       | 43   | [Performance measurements](week08/)                 | Jørgen                   |
+| 9       | 44   | [Performance and scalability](week09/)              | Jørgen                   |
+| 10      | 45   | [Parallel Streams+React](week10/)                   | Jørgen                   |
+| 11      | 46   | [Java Networking & Introduction to Erlang](week11/) | Jørgen+Raúl              |
+| 12      | 47   | Message passing I                                   | Raúl                     |
+| 13      | 48   | Message Passing II                                  | Raúl                     |
+| 14      | 49   | Exam prep                                           | Jørgen+Raúl              |
 
 
 ## Oral Feedback Sessions Schedule
