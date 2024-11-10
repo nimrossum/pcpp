@@ -14,9 +14,9 @@ The goals of this lecture are:
 
 ### Optional readings
 
-[Introductory videos explaining how the Internet protocols](https://www.khanacademy.org/partner-content/code-org/internet-works)
+* [Introductory videos explaining how the Internet protocols](https://www.khanacademy.org/partner-content/code-org/internet-works)
 
-[Documentation of Rest interface to Rejseplanen](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week11/ReST_documentation_Rejseplanen_Latest.pdf)
+* [Documentation of Rest interface to Rejseplanen](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week11/ReST_documentation_Rejseplanen_Latest.pdf)
 
 * If you are not familiar with basic functional programming with Erlang, we recommend to read:
   * [Learn You Some Erlang for Great Good](https://learnyousomeerlang.com/) - Sections from "Starting Out" to "A Short Visit to Common Data Structures"
