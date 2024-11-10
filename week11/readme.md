@@ -27,7 +27,7 @@ The goals of this lecture are:
 
 ## Lecture slides
 
-Not yet ready
+See file [lecture11.pdf](lecture11.pdf).
 
 ## Mandatory assignment
 
