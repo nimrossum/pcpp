@@ -23,7 +23,7 @@ The goals of this lecture are:
   * [Erlang sequential programming tutorial](https://www.erlang.org/docs/26/getting_started/seq_prog)
   
 * [Erlang official documentation (for version OTP 26)](https://www.erlang.org/docs/26/)
-  * You should not read the documentation from cover to cover, but use it as a reference book to get the details for any concept of the 
+  * You should not read the documentation from cover to cover, but use it as a reference book. You can consult the documentation to get the details of any concepts in  the Erlang language, e.g., manuals for built-in modules.
 
 ## Lecture slides
 
