@@ -27,8 +27,8 @@ The goals of this lecture are:
 
 ## Lecture slides
 
-See file lecture11.pdf
+Not yet ready
 
 ## Mandatory assignment
 
-See file [exercises11.pdf](Not yet ready).
+See file [exercises11.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week11/exercises11.pdf).
