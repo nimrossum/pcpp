@@ -9,9 +9,8 @@ The goals of this lecture are:
 
 ## Readings
 
-* Java Sockets: https://docs.oracle.com/javase/tutorial/networking/sockets/index.html
-  and https://docs.oracle.com/javase/tutorial/networking/sockets/index.html 
-
+* [Java Sockets](https://docs.oracle.com/javase/tutorial/networking/sockets/index.html)
+* [Oracle's documentation of HttpURlConnection](https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html)
 
 ### Optional readings
 
