@@ -26,7 +26,7 @@ class PrimeCountingPerf {
   }
 
 // Sequential solution
-  private static long countSequential(int range) {
+  public static long countSequential(int range) {
     long count = 0;
     final int from = 0, to = range;
     for (int i=from; i<to; i++)
