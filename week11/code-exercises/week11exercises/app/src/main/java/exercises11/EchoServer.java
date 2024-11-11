@@ -23,7 +23,7 @@ public class EchoServer {
                     out.println("good bye");
                     break;
                 }
-                out.println(inputLine);
+                out.println(inputLine.toUpperCase());
         }
       } catch (IOException e) { System.out.println(e.getMessage());}
     }
