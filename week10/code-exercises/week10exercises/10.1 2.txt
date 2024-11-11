@@ -1,0 +1,12 @@
+> Task :app:compileJava
+> Task :app:processResources UP-TO-DATE
+> Task :app:classes
+
+> Task :app:run
+Sequential                      3114737,1 ns  143238,50        128
+IntStream                       3386559,7 ns  381152,20        128
+Parallel                       24466048,4 ns 4165491,58         16
+ParallelStream                  1813186,6 ns  267259,66        128
+
+BUILD SUCCESSFUL in 29s
+3 actionable tasks: 2 executed, 1 up-to-date
