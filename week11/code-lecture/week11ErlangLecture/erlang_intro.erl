@@ -48,10 +48,10 @@ apply_after_squared(X, F) ->
 what_type_is_vehicle_if(Vehicle) ->
     if Vehicle#vehicle.type == car ->
             io:format("It is a car~n");
-       Vehicle#vehicle.type == plane ->
-            io:format("It is a plane~n");
        Vehicle#vehicle.type == plane, Vehicle#vehicle.color == white ->
             io:format("It is a white plane~n");
+       Vehicle#vehicle.type == plane ->
+            io:format("It is a plane~n");
        true -> % this is the else
             io:format("Vehicle type unknown~n")
     end.
@@ -64,10 +64,10 @@ what_type_is_vehicle_if(Vehicle) ->
 
 what_type_is_vehicle_guard(Vehicle) when Vehicle#vehicle.type == car ->
     io:format("It is a car~n");
-what_type_is_vehicle_guard(Vehicle) when Vehicle#vehicle.type == plane ->
-    io:format("It is a plane~n");
 what_type_is_vehicle_guard(Vehicle) when Vehicle#vehicle.type == plane, Vehicle#vehicle.color == white ->
     io:format("It is a white plane~n");
+what_type_is_vehicle_guard(Vehicle) when Vehicle#vehicle.type == plane ->
+    io:format("It is a plane~n");
 what_type_is_vehicle_guard(_Vehicle) ->
     io:format("Vehicle type unknown~n").
 
