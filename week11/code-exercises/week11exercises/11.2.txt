@@ -1,0 +1,22 @@
+noLocking:
+ > Server:
+   - count= 32
+ > Client
+   - Socket com:                           1,3 mS   72367,42        256
+
+The desired count with no race conditions would be 100. 
+10 iterations * 10 threads.
+
+
+serverLocking
+ > Server:
+   - count= 100
+ > Client
+   - Socket com:                           0,8 mS   39958,68        512
+
+
+clientLocking
+ > Server:
+   - count= 100
+ > Client
+   - Socket com:                           4,0 mS  195621,72        128

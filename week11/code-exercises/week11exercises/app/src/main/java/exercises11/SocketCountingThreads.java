@@ -94,9 +94,9 @@ public class SocketCountingThreads{
     }
 
     public void run() {
-      noLocking();
+      //noLocking();
       //serverLocking(); 
-      //clientLocking();
+      clientLocking();
     }
   }
 
