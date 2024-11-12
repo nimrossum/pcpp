@@ -13,7 +13,10 @@ The goals of this lecture are:
 * Gul A. Agha. [Actors: A Model Of Concurrent Computation In Distributed Systems](http://dspace.mit.edu/handle/1721.1/6952). MIT Press 1985:
   * Chapter 2, complete.
 	* This book is a bit old, but this chapter provides an objective comparison of shared memory and the actor model.
-    
+
+* Learn You Some Erlang for Great Good!
+  * [The Hitchhiker's Guide to Concurrency](https://learnyousomeerlang.com/the-hitchhikers-guide-to-concurrency)
+
 * Erlang official documentation (for version OTP 26) 
   * [Chapter 3 - Concurrent Programming](https://www.erlang.org/docs/26/getting_started/conc_prog)
 
