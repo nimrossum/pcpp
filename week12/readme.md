@@ -10,7 +10,7 @@ The goals of this lecture are:
 
 ## Readings
 
-* Gul A. Agha. [Actors: A Model Of Concurrent Computation In Distributed Systems](https://apps.dtic.mil/dtic/tr/fulltext/u2/a157917.pdf). MIT Press 1985:
+* Gul A. Agha. [Actors: A Model Of Concurrent Computation In Distributed Systems](http://dspace.mit.edu/handle/1721.1/6952). MIT Press 1985:
   * Chapter 2, complete.
 	* This book is a bit old, but this chapter provides a more objective comparison of shared memory and actors model (as opposed to the sections in the Akka documention mentioned above).
     
