@@ -28,5 +28,8 @@ hs_err_pid*
 # Ignore Gradle build output directory
 build
 
+# Ignore .beam files
+*.beam
+
 # Ignore temporal linux files
 *~
