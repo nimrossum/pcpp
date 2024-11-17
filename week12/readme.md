@@ -27,6 +27,10 @@ The goals of this lecture are:
 * Erlang Reference Manual (for version OTP 26). As mentioned last week, do not treat the manual as a textbook, but simply as a reference to use when you would like to get the details of specific parts of the Erlang language. The chapters below contain details for some of the concepts that we will cover in this lecture.
   * [Chapter 14 - Processes](https://www.erlang.org/docs/26/reference_manual/processes)
 
+* Learn You Some Erlang for Great Good!
+  * [Designing a Concurrent Application](https://learnyousomeerlang.com/designing-a-concurrent-application)
+    * Ignore the parts about monitoring and supervision. Focus on the plain Erlang parts. The purpose of this reading to add another example of building an actor system in Erlang.
+
 ## Lecture slides
 
 See file [lecture12.pdf](lecture12.pdf).
