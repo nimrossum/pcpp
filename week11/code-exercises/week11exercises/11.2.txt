@@ -5,8 +5,9 @@ noLocking:
    - Socket com:                           1,3 mS   72367,42        256
 
 The desired count with no race conditions would be 100. 
-10 iterations * 10 threads.
-
+10 iterations * 10 threads. 32 is far below desired 100. Low count on the server highlights 
+significant race conditions due to the absence of locking mechanisms. 
+Multiple threads interfere with each other, preventing accurate incrementing of the counter.
 
 serverLocking
  > Server:
@@ -14,9 +15,17 @@ serverLocking
  > Client
    - Socket com:                           0,8 mS   39958,68        512
 
+Surprisingly, socket communication is faster (0.8 ms) compared to no locking. 
+Maybe the absence of data corruption (due to race conditions) results in more 
+efficient data exchange, even with the added locking overhead? I really don't know
+why more bytes were sent.
 
 clientLocking
  > Server:
    - count= 100
  > Client
    - Socket com:                           4,0 mS  195621,72        128
+
+Significantly higher socket communication time (4.0 ms) 
+This is because managing locks on the client introduces coordination overhead, as the
+client must ensure thread safety before communicating with the server.

@@ -46,7 +46,7 @@ Using Parallel Stream
 17 ForkJoinPool.commonPool-worker-5
 1 ForkJoinPool.commonPool-worker-1
 
-When the tasks are very brief (such as in previous examples), even though threads may start the tasks in the order they were submitted, various factors—like differences in the exact time each thread begins executing the task, CPU scheduling, and system overhead—cause each task to complete at a slightly different time, leading to an almost random order in result collection.
+When the tasks are very brief (such as in previous examples), even though threads may start the tasks in the order they were submitted, various factors—like differences in the exact time each thread begins executing the task, CPU scheduling, and system overhead cause each task to complete at a slightly different time, leading to an almost random order in result collection.
 
 When the execution time is longer, this plays less of a roll, and we see threads finishing in the same order
 each iteration. However, there is no guarantee for this.
