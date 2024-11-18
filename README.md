@@ -27,7 +27,7 @@ Each week we will update this repository with the material used in this week.
 | 10      | 45   | [Parallel Streams+React](week10/)                   | Jørgen                   |
 | 11      | 46   | [Java Networking & Introduction to Erlang](week11/) | Jørgen+Raúl              |
 | 12      | 47   | [Message passing I](week12/)                        | Raúl                     |
-| 13      | 48   | Message Passing II                                  | Raúl                     |
+| 13      | 48   | [Message Passing II](week13/)                       | Raúl                     |
 | 14      | 49   | Exam prep                                           | Jørgen+Raúl              |
 
 
