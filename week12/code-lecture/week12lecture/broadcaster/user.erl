@@ -2,8 +2,7 @@
 -export([start/1, init/1, start_reg/1,
          subscribe_to_chatroom/2,
          unsubscribe_from_chatroom/1,
-         send_message_to_broadcast/2,
-         start_things/0]).
+         send_message_to_broadcast/2]).
 
 % 1. State of the actor
 -record(user_state, {username, chatroom}).
