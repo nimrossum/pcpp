@@ -1,7 +1,7 @@
 % raup@itu.dk * 2024-11-15
 
 -module(turnstile).
--export([start/1, init/1, loop/1]).
+-export([start/1, init/1]).
 
 % State of the actor
 -record(turnstile_state, {counter_server}).
