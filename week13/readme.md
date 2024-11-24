@@ -28,8 +28,8 @@ The goals of this lecture are:
 
 ## Lecture slides
 
-To appear.
+See file [lecture13.pdf](lecture13.pdf).
 
-## Exercises
+## Mandatory assignment
 
-To appear.
+See file [exercises13.pdf](exercises13.pdf).
