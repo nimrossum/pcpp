@@ -1,4 +1,4 @@
-# Exam questions for the examination of Practical Concurrent and Parallel Programming (PCPP) F2023
+# Exam questions for the examination of Practical Concurrent and Parallel Programming (PCPP) F2024
 
 Below is a list of 10 questions for the exam. The exam will start with a question that you draw (at random) from the list below. As the exam proceeds, teachers and examiners may transition to any of the other questions, or ask questions about any of the topics in the syllabus. All questions have the same structure. First, you are supposed to start by defining, motivating and explaining the concepts introduced in a particular week of the course. After this, you should show some samples of the code you made for the exercises in that week. Teachers and examiners may also show code examples related to the question for you to discuss. While you are answering a question, teachers and examiners might ask about specific details of the question you are answering.
 
