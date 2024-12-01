@@ -13,6 +13,6 @@ The goal of this week is to address questions related to the exam, and revisit a
 
 See file [lecture14.pdf](lecture14.pdf).
 
-### Exercises
+## Exercises
 
 No exercises this week.
