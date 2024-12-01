@@ -29,6 +29,6 @@ The goals of this lecture are:
 
 See file [lecture11.pdf](lecture11.pdf).
 
-## Mandatory assignment
+## Exercises 
 
 See file [exercises11.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week11/exercises11.pdf).

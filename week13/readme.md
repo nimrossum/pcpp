@@ -30,6 +30,6 @@ The goals of this lecture are:
 
 See file [lecture13.pdf](lecture13.pdf).
 
-## Mandatory assignment
+## Exercises
 
 See file [exercises13.pdf](exercises13.pdf).

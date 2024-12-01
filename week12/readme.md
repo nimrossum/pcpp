@@ -35,6 +35,6 @@ The goals of this lecture are:
 
 See file [lecture12.pdf](lecture12.pdf).
 
-## Mandatory assignment
+## Exercises
 
 See file [exercises12.pdf](exercises12.pdf).

@@ -24,6 +24,6 @@ The goals of this lecture are:
 
 See file [lecture10.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week10/lecture10.pdf).
 
-## Mandatory assignment
+## Exercises
 
 See file [exercises10.pdf](https://github.itu.dk/jst/PCPP2024-Public/blob/main/week10/exercises10.pdf).
