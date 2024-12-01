@@ -28,7 +28,7 @@ Each week we will update this repository with the material used in this week.
 | 11      | 46   | [Java Networking & Introduction to Erlang](week11/) | Jørgen+Raúl              |
 | 12      | 47   | [Message passing I](week12/)                        | Raúl                     |
 | 13      | 48   | [Message Passing II](week13/)                       | Raúl                     |
-| 14      | 49   | Exam prep                                           | Jørgen+Raúl              |
+| 14      | 49   | [Exam prep](week14/)                                | Jørgen+Raúl              |
 
 
 ## Oral Feedback Sessions Schedule
