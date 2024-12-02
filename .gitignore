@@ -95,3 +95,10 @@ gradle-app.setting
 **/bin
 .idea
 erl_crash.dump
+node_modules
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+

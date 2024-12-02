@@ -400,9 +400,9 @@ We use linearizability we can use the object in a concurrent setting, e.g. a que
   - Pre condition: state is $q \cdot \{e\}$
   - Post condition: state is $q$ and return $e$
 
-### Sequentially consistenty
+### Sequentially consistency
 
-Sequentially consistenty was defined by how operations were orded in a sequential.
+Sequentially consistency was defined by how operations were ordered in a sequential execution
 
 Compiler swaps operations to optimize code, as long as the result is consistent.
 
