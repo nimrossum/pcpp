@@ -13,7 +13,7 @@ start(ServerPID) ->
 
 % 3. Initialization
 init(ServerPID) ->
-    State = #worker_state{server=ServerPID},
+    State = #worker_state{server = ServerPID},
     loop(State).
 
 % 4. Behavior upon receiving messages
@@ -26,9 +26,11 @@ loop(State) ->
     end.
 
 % 5. Message handlers
-handle_compute(SenderPID, 
-               Task = #task{function = F, arguments=Args}, 
-               State = #worker_state{server = ServerPID}) ->
+handle_compute(
+    SenderPID,
+    Task = #task{function = F, arguments = Args},
+    State = #worker_state{server = ServerPID}
+) ->
     Result = apply(F, Args),
     SenderPID ! {result, Task, Result},
     ServerPID ! {work_done, self()},

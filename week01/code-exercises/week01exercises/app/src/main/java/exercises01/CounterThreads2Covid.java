@@ -39,6 +39,10 @@ public class CounterThreads2Covid {
                 try {
                     if (counter < MAX_PEOPLE_COVID) {
                         counter++;
+                        // corresponds to
+                        // long value = counter;
+                        // value = value + 1;
+                        // counter = value;
                     }
                 } finally {
                     lock.unlock();
