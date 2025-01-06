@@ -250,13 +250,20 @@ It is useful for lock-free data structures.
 
 It is a safe way to update a value in a shared memory location, assuming that it has the same value as when it was read.
 
-You also need to
+Compare and set is an abstraction upon compare and swap implemented in the language.
 
 ## Main notions of progress in non-blocking data structures / computation
 
 1. **Wait-free**: A method of an object is wait-free if every call finishes its execution in a finite number of steps.
+
+   - **All threads make progress, no starvation, no deadlocks**
+   - Highest level of progress
+
 2. **Lock-free**: A method of an object is lock-free if executing the method guarantees that some method call (including concurrent) finishes in a finite number of steps.
-3. **Obstruction-free**: A method of an object is obstruction-free if, from any point after which it executes in isolation, it finishes in a finite number of steps.
+
+   - **At least one thread can make progress**
+
+3. **Obstruction-free**: A method of an object is obstruction-free if, from any point after which it executes in isolation, it finishes in a finite number of steps. - **My thread can make progress if run in isolation**
 
 Wait free implies lock free and obstruction free.
 Lock-free implies obstruction free.
@@ -337,7 +344,7 @@ Pool.submit() is used to run a callable.
 
 Two Signals we should be able to recognize:
 
-# Exam
+## Exam
 
 Exam folder in github repositoty
 
@@ -366,6 +373,8 @@ Bring _one_ A4 paper with bullet points for each question.
 
 To show code, you can bring your laptop or print outs.
 
+## Lecture 14
+
 ## Thread safety
 
 A program is thread safe iff it is race condition free.
@@ -389,6 +398,7 @@ We use linearizability we can use the object in a concurrent setting, e.g. a que
 ### Queue spec
 
 - Enqueue(e): Add e to the queue
+
   - Pre condition: state is $q$
   - Post condition: state is $q \cdot \{e\}$
 
@@ -416,8 +426,6 @@ An execution is sequentially consistent
 
 If we don't have sequential consistency, invalid results can be returned.
 
-
-
 If we have a computer and a compiler that ensure seq cons then there are only two possible executions:
 
 q.enx(x) p.enq(y) q.dep(x) p.deq(y)
@@ -441,13 +449,14 @@ Argue linearizability:
 
 1. Define clearly the sequential specification of the object
 2. Identify the linearization points
-  - Explain the operation associated with each linearization point
+
+- Explain the operation associated with each linearization point
+
 3. Explain how blocks of program statements in the same or other methods
 
 The linearization point is the point in time where the operation
 
 At that point, if any thread tries to enqueue, it will be done after the linearization point
-
 
 ## Quisent state
 
