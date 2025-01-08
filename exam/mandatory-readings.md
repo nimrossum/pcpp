@@ -1,7 +1,5 @@
 # Mandatory reading (“pensum”) for the examination in Practical Concurrent and Parallel Programing (PCPP) F2024
 
-## Preliminary version (subject to change)
-
 The following two books are referred to as "Goetz" and "Herlihy", respectively:
 
 * Goetz, B., Peierls, T., Lea, D., Bloch, J., Bowbeer, J., & Holmes, D. (2006). Java concurrency in practice. Pearson Education.
